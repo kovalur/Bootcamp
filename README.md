@@ -1,2 +1,2 @@
 # Bootcamp
-Coding Bootcamp stuff
+Coding Bootcamp exercises
