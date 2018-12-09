@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, c, least;
+    int a, b, c, max;
     
     scanf("%d %d %d", &a, &b, &c);
     
-    least = a;
+    max = a;
     
-    if ( b > least ) {
-        least = b;
+    if ( b > max ) {
+        max = b;
     }
-    if ( c > least ) {
-        least = c;
+    if ( c > max ) {
+        max = c;
     }
-    printf("%d\n", least);
+    printf("%d\n", max);
     
     return 0;
 }

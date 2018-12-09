@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, c, d, e, least;
+    int a, b, c, d, e, max;
     
     scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
     
-    least = a;
+    max = a;
     
-    if ( b > least ) {
-        least = b;
+    if ( b > max ) {
+        max = b;
     }
-    if ( c > least ) {
-        least = c;
+    if ( c > max ) {
+        lmax= c;
     }
-    if ( d > least ) {
-        least = d;
+    if ( d > max ) {
+        max = d;
     }
-    if ( e > least ) {
-        least = e;
+    if ( e > max ) {
+        max = e;
     }
-    printf("%d\n", least);
+    printf("%d\n", max);
     
     return 0;
 }
