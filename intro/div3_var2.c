@@ -38,7 +38,7 @@ int main() {
         }
     }
     if ( minAbsolute <= MULTIPLE - 1 ) {
-        if ( maxAbsolute >= MULTIPLE ) {
+        if ( maxAbsolute >= MULTIPLE && minAbsolute > 0 ) {
             if ( min < max && min > 0 ) {
                 min += step;
             } else if ( min > max && min < 0 ) {
@@ -47,7 +47,7 @@ int main() {
         }
     }
     if ( maxAbsolute <= MULTIPLE - 1 ) {
-        if ( minAbsolute >= MULTIPLE ) {
+        if ( minAbsolute >= MULTIPLE && maxAbsolute > 0 ) {
             if ( max > min && min < 0 ) {
                 max -= step;
             }
