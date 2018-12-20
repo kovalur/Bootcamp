@@ -1,17 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int length, max;
+    int length;
+    int max;
     
-    scanf("%d", &length);
-    int array[length];
+    scanf("%d %d", &length, &max);
     
-    for ( int i = 0; i < length; i++  ) {
-        scanf("%d", &array[i]);
-        if ( array[i] > array[i-1] ) {
-            max = array[i];
+    for ( int current; length > 1; length-- ) {
+        scanf("%d", &current);
+        if ( current > max ) {
+            max = current;
         }
     }
-    
     printf("%d\n", max);
+    
+    return 0;
 }

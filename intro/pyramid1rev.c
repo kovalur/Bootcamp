@@ -5,11 +5,11 @@ int main() {
     
     scanf("%d", &total);
     
-    for ( int row = 0; row < total; row++ ) {
-        for ( int col = 1; col < total - row; col++ ) {
+    for ( int row = total; row > 0; row-- ) {
+        for ( int col = 1; col < row; col++ ) {
             printf("%d ", col);
         }
-        printf("%d\n", total-row);
+        printf("%d\n", row);
     }
     
     return 0;
