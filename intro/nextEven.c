@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int x;
+    int a;
     
-    scanf("%d", &x);
+    scanf("%d", &a);
     
-    if ( x % 2 == 0 ) {
-        printf("%d\n", x);
-    } else {
-        printf("%d\n", x+1);
+    if ( a % 2 != 0 ) {
+        a += 1;
     }
+    
+    printf("%d\n", a);
     
     return 0;
 }

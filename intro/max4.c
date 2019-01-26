@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, c, d, max;
+    int a, b, c, d;
+    int max;
     
     scanf("%d %d %d %d", &a, &b, &c, &d);
     
     max = a;
-    
-    if ( b > max ) {
+    if ( max < b ) {
         max = b;
     }
-    if ( c > max ) {
+    if ( max < c ) {
         max = c;
     }
-    if ( d > max ) {
+    if ( max < d ) {
         max = d;
     }
+    
     printf("%d\n", max);
     
     return 0;
