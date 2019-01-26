@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int carSpeed, speedLimit;
+    int speed, limit;
     
-    scanf("%d %d", &carSpeed, &speedLimit);
+    scanf("%d %d", &speed, &limit);
     
-    if ( carSpeed > speedLimit ) {
+    if ( speed > limit ) {
         printf("violation\n");
     } else {
         printf("ok\n");

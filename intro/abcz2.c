@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int x;
-    int aliquant = 1;
+    int a;
+    int flag = 1;
     
-    scanf("%d", &x);
+    scanf("%d", &a);
     
-    if ( x % 2 == 0 ) {
+    if ( a % 2 == 0 ) {
         printf("alpha\n");
-        aliquant = 0;
+        flag = 0;
     }
-    if ( x % 3 == 0 ) {
+    if ( a % 3 == 0 ) {
         printf("bravo\n");
-        aliquant = 0;
+        flag = 0;
     }
-    if ( x % 5 == 0 ) {
+    if ( a % 5 == 0 ) {
         printf("charlie\n");
-        aliquant = 0;
+        flag = 0;
     }
-    if ( aliquant ) {
+    if ( flag ) {
         printf("zulu\n");
     }
     
