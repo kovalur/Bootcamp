@@ -12,6 +12,7 @@ int main() {
     for ( int i = 1; i < max; i += 2 ) {
         printf("%d ", i);
     }
-    
     printf("%d\n", max);
+    
+    return 0;
 }

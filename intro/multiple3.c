@@ -12,6 +12,7 @@ int main() {
     for ( int i = 0; i < max; i += MULTIPLE ) {
         printf("%d ", i);
     }
-    
     printf("%d\n", max);
+    
+    return 0;
 }

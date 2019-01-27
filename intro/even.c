@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main( void ) {
+int main() {
     int max;
     
     scanf("%d", &max);
@@ -12,6 +12,7 @@ int main( void ) {
     for ( int i = 0; i < max; i += 2 ) {
         printf("%d ", i);
     }
-    
     printf("%d\n", max);
+    
+    return 0;
 }

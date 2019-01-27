@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int x, y;
+    int a, b;
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
     
-    fscanf(in, "%d %d", &x, &y);
+    fscanf(in, "%d %d", &a, &b);
     fclose(in);
     
-    fprintf(out, "%d&%d=%d\n", x, y, x&y);
-    fprintf(out, "%d|%d=%d\n", x, y, x|y);
-    fprintf(out, "%d^%d=%d\n", x, y, x^y);
-    fprintf(out, "%d<<%d=%d\n", x, y, x<<y);
-    fprintf(out, "%d>>%d=%d\n", x, y, x>>y);
+    fprintf(out, "%d&%d=%d\n", a, b, a&b);
+    fprintf(out, "%d|%d=%d\n", a, b, a|b);
+    fprintf(out, "%d^%d=%d\n", a, b, a^b);
+    fprintf(out, "%d<<%d=%d\n", a, b, a<<b);
+    fprintf(out, "%d>>%d=%d\n", a, b, x>>b);
     fclose(out);
     
     return 0;
