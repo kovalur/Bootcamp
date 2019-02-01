@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 void sliceShiftLeft(int array[], int start, int end) {
-    for ( ; start < end; start++ ) {
-        int temp = array[start+1];
+    if ( start < end ) {
+        int temp = array[start];
         
-        array[start+1] = array[start];
-        array[start] = temp;
+        for ( int i = start; i < end; i++ ) {
+            array[i] = array[i+1];
+        }
+        array[end] = temp;
     }
 }
 
 int main() {
     int size = 10;
     int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '\0'};
-    int start = 3;
-    int end = 7;
+    int start = 9;
+    int end = 0;
     int last = size - 1;
     
     sliceShiftLeft(array, start, end);

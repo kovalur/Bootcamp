@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 void arrayShiftLeft(int array[], int size) {
-    for ( int i = 1, j = i - 1; i < size; i++, j++ ) {
-        int tmp = array[j];
-
-        array[j] = array[i];
-        array[i] = tmp;
+    int temp = array[0];
+    
+    for ( int i = 1; i < size; i++ ) {
+        array[i-1] = array[i];
     }
+    array[size-1] = temp;
 }
 
 int main() {

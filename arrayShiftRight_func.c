@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 void arrayShiftRight(int array[], int size) {
-    for ( int i = size - 1, j = i - 1; i > 0; i--, j-- ) {
-        int temp = array[j];
-
-        array[j] = array[i];
-        array[i] = temp;
+    int last = size - 1;
+    int temp = array[last];
+    
+    for ( int i = last; i > 0; i-- ) {
+        array[i] = array[i-1];
     }
+    array[0] = temp;
 }
 
 int main () {
