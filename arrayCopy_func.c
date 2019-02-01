@@ -8,7 +8,7 @@ void arrayCopy(int destination[], int source[], int size) {
 
 int main() {
     int size = 10;
-    int source[] = {1, 2, 3, 4, 5, 6 , 7, 8, 9, 10};
+    int source[] = {1, 2, 3, 4, 5, 6 , 7, 8, 9, 10, '\0'};
     int destination[size];
     
     arrayCopy(destination, source, size);
