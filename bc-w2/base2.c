@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    int number, base;
+    int number, base, ch;
     int power = 1;
-    int ch;
     
     scanf("%d %d", &number, &base);
     
@@ -12,18 +11,18 @@ int main() {
         printf("-");
     }
     
-    for ( int tmp = number / base; power <= tmp; power *= base );
+    for ( int temp = number / base; power <= temp; power *= base );
     
     for ( ; power >= base; power /= base ) {
         ch = number / power + 48;
-        if ( ch > 57 ) {
+        if ( ch > '9' ) {
             ch += 7;
         }
         printf("%c", ch);
         number %= power;
     }
     ch = number / power + 48;
-    if ( ch > 57 ) {
+    if ( ch > '9' ) {
         ch += 7;
     }
     printf("%c\n", ch);

@@ -14,9 +14,9 @@ int main() {
     
     for ( int i = 0; i < size; i++ ) {
         if ( i % 2 ) {
-            array[i] = -1;
+            array[i] = -1 * i;
         } else {
-            array[i] = 1;
+            array[i] = i;
         }
     }
     

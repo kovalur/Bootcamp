@@ -8,7 +8,7 @@ int strLen(char str[]) {
 }
 
 int main() {
-    char str[] = {'h', 'e', 'l', 'l', 'o', '!'};
+    char str[] = {'h', 'e', 'l', 'l', 'o', '!', '\0'};
     int len = 0;
     
     len = strLen(str);

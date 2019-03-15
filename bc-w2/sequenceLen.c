@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-#define MAX_SIZE 100
+#define MAX_LENGTH 100
 
 int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
-    int size = 0;
+    int len = 0;
     
-    for ( int x; size < MAX_SIZE && fscanf(in, "%d", &x) == 1; size++ );
+    for ( int x; len < MAX_LENGTH && fscanf(in, "%d", &x) == 1; len++ );
     fclose(in);
-    fprintf(out, "%d\n", size);
+
+    fprintf(out, "%d\n", len);
     fclose(out);
+    
     return 0;
 }

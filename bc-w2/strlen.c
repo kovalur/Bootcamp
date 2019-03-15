@@ -6,14 +6,14 @@ int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
     char array[MAX_SIZE];
-    int length = 0;
+    int len = 0;
     
     fscanf(in, "%100s", array);
     fclose(in);
     
-    for ( ; array[length] != '\0'; length++ );
+    for ( ; array[len] != '\0'; len++ );
     
-    fprintf(out, "%d\n", length);
+    fprintf(out, "%d\n", len);
     fclose(out);
     
     return 0;

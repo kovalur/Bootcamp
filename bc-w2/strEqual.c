@@ -3,7 +3,7 @@
 int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
-    int size = 100;
+    int size = 101;
     char str1[size];
     char str2[size];
     int len1 = 0;

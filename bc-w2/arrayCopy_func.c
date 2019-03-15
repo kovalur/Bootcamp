@@ -13,7 +13,5 @@ int main() {
     
     arrayCopy(destination, source, size);
     
-    arrayPrint(destination, size);
-    
     return 0;
 }

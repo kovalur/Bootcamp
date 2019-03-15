@@ -21,10 +21,7 @@ int main() {
     
     strRot13(str);
     
-    for ( int i = 0; str[i] != '\0'; i++ ) {
-        printf("%c", str[i]);
-    }
-    printf("\n");
+    printf("%s\n", str);
     
     return 0;
 }

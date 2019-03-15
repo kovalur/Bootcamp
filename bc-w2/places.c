@@ -2,20 +2,21 @@
 
 int main() {
     int x;
-    int count = 0;
+    int counter = 0;
     
     scanf("%d", &x);
     
     if ( x <= 0 ) {
-        count += 1;
+        counter += 1;
         x *= -1;
     }
     
-    for ( ; x != 0; count++ ) {
+    for ( ; x != 0; ) {
         x /= 10;
+        counter += 1;
     }
     
-    printf("%d\n", count);
+    printf("%d\n", counter);
     
     return 0;
 }

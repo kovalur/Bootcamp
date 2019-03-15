@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int length;
+    int length, number;
     
     scanf("%d", &length);
     
-    for ( int number; length > 0; length-- ) {
+    for ( ; length > 0; length-- ) {
         scanf("%d", &number);
         printf("%d\n", number^42);
     }

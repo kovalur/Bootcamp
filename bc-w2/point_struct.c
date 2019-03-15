@@ -6,7 +6,7 @@ typedef struct {
 } Point;
 
 void initPoint(Point *a) {
-    scanf("%lg %lg", &(a->x), &(a->y));
+    scanf("%g %g", &(a->x), &(a->y));
 } 
 
 void pointPrint(Point a) {

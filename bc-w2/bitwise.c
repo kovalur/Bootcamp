@@ -12,7 +12,7 @@ int main() {
     fprintf(out, "%d|%d=%d\n", a, b, a|b);
     fprintf(out, "%d^%d=%d\n", a, b, a^b);
     fprintf(out, "%d<<%d=%d\n", a, b, a<<b);
-    fprintf(out, "%d>>%d=%d\n", a, b, x>>b);
+    fprintf(out, "%d>>%d=%d\n", a, b, a>>b);
     fclose(out);
     
     return 0;

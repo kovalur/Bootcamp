@@ -6,7 +6,7 @@ typedef struct {
 } Complex;
 
 void initComplex(Complex *this) {
-    scanf("%lg %lg", &(this->re), &(this->im));
+    scanf("%g %g", &(this->re), &(this->im));
 }
 
 void complexIncrement(Complex *this, Complex other) {

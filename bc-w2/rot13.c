@@ -3,7 +3,7 @@
 int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
-    int size = 100;
+    int size = 101;
     char str[size];
     
     fscanf(in, "%100s", str);
@@ -21,9 +21,8 @@ int main() {
         } else if ( ch > 'M' && ch <= 'Z' ) {
             str[i] = ch - shift;
         }
-        fprintf(out, "%c", str[i]);
     }
-    fprintf(out, "\n");
+    fprintf(out, "%s\n", str);
     fclose(out);
     
     return 0;

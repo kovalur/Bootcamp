@@ -6,7 +6,7 @@ typedef struct {
 } Vector;
 
 void initVector(Vector *a) {
-    scanf("%lg %lg", &(a->x), &(a->y));
+    scanf("%g %g", &(a->x), &(a->y));
 }
 
 void vectorIncrement(Vector *this, Vector other) {

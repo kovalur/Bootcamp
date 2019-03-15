@@ -1,28 +1,26 @@
 #include <stdio.h>
 
+#define MAX_SIZE 101
+
 int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
-    int size = 100;
-    char str[size];
+    char str[MAX_SIZE];
     int len = 0;
-    int last;
     
-    for ( ; len < size && fscanf(in, "%c", &str[len]) == 1; len++ );
+    fscanf(in, "%100s", str);
     fclose(in);
     
-    last = len - 1;
-    for ( int i = 0, j = last; i < j; i++, j-- ) {
+    for ( ; str[len] != '\0'; len++ );
+    
+    for ( int i = 0, j = len - 1; i < j; i++, j-- ) {
         int temp = str[j];
         
         str[j] = str[i];
         str[i] = temp;
     }
     
-    for ( int i = 0; i < last; i++ ) {
-        fprintf(out, "%c", str[i]);
-    }
-    fprintf(out, "%c\n", str[last]);
+    fprintf(out, "%s\n", str);
     fclose(out);
     
     return 0;
