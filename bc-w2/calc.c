@@ -20,19 +20,19 @@ int main() {
         
         lastReadStatus = fscanf(in, "%c", &ch2);
         if ( ch1 == '+' || ch1 == '-' ) {
-            if ( ch2 == '+' || ch2 == '-' || ch2 == 10 || lastReadStatus == EOF ) {
+            if ( ch2 == '+' || ch2 == '-' || ch2 == '\n' || lastReadStatus == EOF ) {
                 if ( ch1 == '+' ) {
                     result += temp;
                 } else if ( ch1 == '-' ) {
                     result -= temp;
                 }
-            } else if ( ch2 == '*' || ch2 == '/' || ch2 == 10 || lastReadStatus == EOF ) {
+            } else if ( ch2 == '*' || ch2 == '/' || ch2 == '\n' || lastReadStatus == EOF ) {
                 if ( ch1 == '+' ) {
                     bufer = temp;
                 } else if ( ch1 == '-' ) {
                     bufer = -temp;
                 }
-                if ( ch2 == 10 || ch2 == EOF ) {
+                if ( ch2 == '\n' || ch2 == EOF ) {
                     result += bufer;
                 }
             }
@@ -42,7 +42,7 @@ int main() {
             } else if ( ch1 == '/' ) {
                 bufer /= temp;
             }
-            if ( ch2 == '+' || ch2 == '-' || ch2 == 10 || lastReadStatus == EOF ) {
+            if ( ch2 == '+' || ch2 == '-' || ch2 == '\n' || lastReadStatus == EOF ) {
                 result += bufer;
             }
         }
@@ -52,5 +52,6 @@ int main() {
     
     fprintf(out, "%g\n", result);
     fclose(out);
+    
     return 0;
 }
