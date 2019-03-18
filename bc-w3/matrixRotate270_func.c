@@ -10,6 +10,15 @@ void matrixRotate270(int target[SIZE][SIZE], int source[SIZE][SIZE], int size) {
     }
 }
 
+void matrixFillWithNaturalNumbers(int matrix[SIZE][SIZE], int size) {
+    for ( int counter = 1, row = 0; row < size; row++ ) {
+        for ( int col = 0; col < size; col++ ) {
+            matrix[row][col] = counter;
+            counter += 1;
+        }
+    }
+}
+
 void matrixPrint(int matrix[SIZE][SIZE], int size) {
     int last = size - 1;
     
@@ -21,19 +30,10 @@ void matrixPrint(int matrix[SIZE][SIZE], int size) {
     }
 }
 
-void matrixFillWithNaturalNumbers(int matrix[SIZE][SIZE], int size) {
-    for ( int counter = 1, i = 0; i < size; i++ ) {
-        for ( int j = 0; j < size; j++ ) {
-            matrix[i][j] = counter;
-            counter += 1;
-        }
-    }
-}
-
 int main() {
     int size = SIZE;
-    int target[size][size];
     int source[size][size];
+    int target[size][size];
     
     matrixFillWithNaturalNumbers(source, size);
     matrixPrint(source, size);
