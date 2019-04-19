@@ -50,7 +50,7 @@ void printToFileMatrixOfOddNaturalNumbers(FILE *file, int size) {
 int main() {
     FILE *in = fopen("task.in", "w+");
     int size = SIZE;
-    int matrix[size][size];
+    int matrix[SIZE][SIZE];
     
     printToFileMatrixOfOddNaturalNumbers(in, size);
     rewind(in);
