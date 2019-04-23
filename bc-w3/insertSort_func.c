@@ -2,9 +2,9 @@
 
 #define SIZE 11
 
-void printArray(int array[], int size)
+void printArray(int array[], int len)
 {
-    int last = size - 1;
+    int last = len - 1;
 
     printf("{");
     if (last > -1)
@@ -39,31 +39,31 @@ void printArray(int array[], int size)
 // }
 
 // With optimization
-void insertSort(int array[], int size) {
-    for ( int i = 1; i < size; i++ ) {
-        int index = i;
+void insertSort(int array[], int len) {
+    for ( int i = 1; i < len; i++ ) {
+        int idx = i;
         int temp = array[i];
-
+        
         for ( int j = i - 1; j >= 0; j-- ) {
             if ( array[i] < array[j] ) {
-                index = j;
+                idx = j;
             }
         }
-        for ( int k = i; k > index; k-- ) {
+        for ( int k = i; k > idx; k-- ) {
             array[k] = array[k-1];
         }
-        array[index] = temp;
+        array[idx] = temp;
     }
 }
 
 int main() {
-    int size = SIZE;
+    int len = SIZE;
     int array[SIZE] = {24, 1, 0, 15, 23, 6, 18, 345, 6, 15, 0};
 
-    printArray(array, size);
+    printArray(array, len);
     printf("\n######################################\n");
-    insertSort(array, size);
-    printArray(array, size);
+    insertSort(array, len);
+    printArray(array, len);
 
     return 0;
 }
