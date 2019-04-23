@@ -23,25 +23,36 @@ void printArray(int array[], int size)
     printf("};");
 }
 
-// NOT COMPLETED!
-void insertSort(int array[], int size) {
-    int last = size - 1;
-    
-    for (int i = 0; i < last; i++ )
-    {
-        for (int index = i, from = i + 1; index >= 0; index--)
-        {
-            if (array[from] < array[index])
-            {
-                int temp = array[index];
+// // Without optimization
+// void insertSort(int array[], int size) {
+//     for ( int i = 1; i < size; i++ ) {
+//         for ( int j = i - 1, k = i; j >= 0; j-- ) {
+//             if ( array[k] < array[j] ) {
+//                 int temp = array[j];
 
-                printf("array[%d] = %d --> array[%d] = %d\n", index, array[index], from, array[from]);
-                printf("\n######################################\n");
-                array[index] = array[from];
-                array[from] = temp;
-                index = i;
+//                 array[j] = array[k];
+//                 array[k] = temp;
+//                 k = j;
+//             }
+//         }
+//     }
+// }
+
+// With optimization
+void insertSort(int array[], int size) {
+    for ( int i = 1; i < size; i++ ) {
+        int index = i;
+        int temp = array[i];
+
+        for ( int j = i - 1; j >= 0; j-- ) {
+            if ( array[i] < array[j] ) {
+                index = j;
             }
         }
+        for ( int k = i; k > index; k-- ) {
+            array[k] = array[k-1];
+        }
+        array[index] = temp;
     }
 }
 
