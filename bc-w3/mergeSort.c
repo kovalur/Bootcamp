@@ -102,25 +102,25 @@ int main() {
     FILE *in = fopen("task.in", "r");
     FILE *out = fopen("task.out", "w");
     int len = lenScan(in);
-    int seguence[len];
+    int sequence[len];
     int lo = 0;
     int hi = len - 1;
     
-    arrayScan(in, seguence, len);
+    arrayScan(in, sequence, len);
     fclose(in);
     
     printf("\n");
-    printArray(seguence, len);
+    printArray(sequence, len);
     printf("\n");
     printf("\n");
     
-    mergeSort(seguence, lo, hi);
+    mergeSort(sequence, lo, hi);
     
     printf("\n");
-    printArray(seguence, len);
+    printArray(sequence, len);
     printf("\n");
     
-    writeToFile(out, seguence, len);
+    writeToFile(out, sequence, len);
     fclose(out);
     
     return 0;
