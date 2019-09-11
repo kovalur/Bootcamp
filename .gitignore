@@ -23,3 +23,5 @@ task.out
 # information for Eclipse / Flash Builder.
 *.stackdump
 *.exe
+*.o
+*.gch
