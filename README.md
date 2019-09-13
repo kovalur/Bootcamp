@@ -1,2 +1,2 @@
 # Bootcamp
-Coding Bootcamp tasks
+Coding Bootcamp. Solving tasks in C/C++, Java, PHP and Python.
