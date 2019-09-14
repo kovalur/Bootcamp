@@ -50,11 +50,11 @@ void Gun::shoot() {
 }
 
 std::ostream& operator<<(std::ostream& out, const Gun& gun) {
-    out << "Gun of model #" << gun.getModel() << "." << "\n";
-    out << " details:" << "\n";
-    out << "  * magazine capacity: " << gun.getCapacity() << ";" << "\n";
-    out << "  * bullets in magazine: " << gun.getAmount() << ";" << "\n";
-    out << "  * is gun ready for usage: " << (gun.ready() ? "Yes" : "No") << ";" << "\n";
-    out << "  * number of shots fired: " << gun.getTotalShots() << "." << "\n";
+    out << "Gun of model #" << gun.getModel() << '.' << '\n';
+    out << " details:" << '\n';
+    out << "  * magazine capacity: " << gun.getCapacity() << ';' << '\n';
+    out << "  * bullets in magazine: " << gun.getAmount() << ';' << '\n';
+    out << "  * is gun ready for usage: " << (gun.ready() ? "Yes" : "No") << ';' << '\n';
+    out << "  * number of shots fired: " << gun.getTotalShots() << '.' << '\n';
     return out;
 }

@@ -59,11 +59,11 @@ std::ostream& operator<<(std::ostream& out, const Complex& complex) {
     if ( complex.getImaginary() == 0 ) {
         return out << complex.getReal();
     } else if ( complex.getReal() == 0 ) {
-        return out << complex.getImaginary() << "i";
+        return out << complex.getImaginary() << 'i';
     }
     out << complex.getReal();
     out << std::showpos;
-    out << complex.getImaginary() << "i";
+    out << complex.getImaginary() << 'i';
     out << std::noshowpos;
     return out; 
 }

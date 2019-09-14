@@ -61,6 +61,6 @@ Vector Vector::operator-(const Vector& other) const {
 }
 
 std::ostream& operator<<(std::ostream& out, const Vector& vector) {
-    out << "(" << vector.getX() << ", " << vector.getY() << ")";
+    out << '(' << vector.getX() << ", " << vector.getY() << ')';
     return out;
 }

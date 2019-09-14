@@ -72,10 +72,10 @@ void Unit::counterAttack(Unit& enemy) {
 }
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit) {
-    out << "Unit name is: " << unit.getName() << "." << "\n";
-    out << " details: " << "\n";
-    out << "  * damage: " << unit.getDamage() << ";" << "\n";
-    out << "  * hit points: " << unit.getHitPoints() << ";" << "\n";
-    out << "  * hit points limit: " << unit.getHitPointsLimit() << "." << "\n";
+    out << "Unit name is: " << unit.getName() << '.' << '\n';
+    out << " details: " << '\n';
+    out << "  * damage: " << unit.getDamage() << ';' << '\n';
+    out << "  * hit points: " << unit.getHitPoints() << ';' << '\n';
+    out << "  * hit points limit: " << unit.getHitPointsLimit() << '.' << '\n';
     return out;
 }
