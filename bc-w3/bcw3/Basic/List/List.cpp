@@ -11,15 +11,15 @@ List::List(int capacity, double multiplier)
 }
 
 List::~List() {
-    free(this->array);
+    free(array);
 }
 
 int List::size() const {
-    return this->current;
+    return current;
 }
 
 int List::max_size() const {
-    return this->capacity;
+    return capacity;
 }
 
 void List::erase(int index) {

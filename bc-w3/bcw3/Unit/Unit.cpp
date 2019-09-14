@@ -7,25 +7,25 @@ Unit::Unit(const std::string& name, int hp, int dmg)
 Unit::~Unit() {}
 
 void Unit::ensureIsAlive() {
-    if ( this->hitPoints == 0 ) {
+    if ( hitPoints == 0 ) {
         throw UnitIsDead();
     }
 }
 
 int Unit::getDamage() const {
-    return this->damage;
+    return damage;
 }
 
 int Unit::getHitPoints() const {
-    return this->hitPoints;
+    return hitPoints;
 }
 
 int Unit::getHitPointsLimit() const {
-    return this->hitPointsLimit;
+    return hitPointsLimit;
 }
 
 const std::string& Unit::getName() const {
-    return this->name;
+    return name;
 }
 
 void Unit::addHitPoints(int hp) {

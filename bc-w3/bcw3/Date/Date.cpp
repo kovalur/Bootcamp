@@ -13,15 +13,15 @@ Date::Date(int day, int month, int year) : day(day), month(month), year(year) {
 Date::~Date() {}
 
 int Date::getDay() const {
-    return this->day;
+    return day;
 }
 
 int Date::getMonth() const {
-    return this->month;
+    return month;
 }
 
 int Date::getYear() const {
-    return this->year;
+    return year;
 }
 
 void Date::validate(int day, int month, int year) {

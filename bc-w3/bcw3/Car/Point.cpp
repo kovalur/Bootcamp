@@ -7,11 +7,11 @@ Point::Point(double x, double y) : x(x), y(y) {}
 Point::~Point() {}
 
 double Point::getX() const {
-    return this->x;
+    return x;
 }
 
 double Point::getY() const {
-    return this->y;
+    return y;
 }
 
 double Point::distance(const Point& other) const {

@@ -6,11 +6,11 @@ Paper::Paper(int maxSymbols) : maxSymbols(maxSymbols), symbols(0), content("") {
 Paper::~Paper() {}
 
 int Paper::getMaxSymbols() const {
-    return this->maxSymbols;
+    return maxSymbols;
 }
 
 int Paper::getSymbols() const {
-    return this->symbols;
+    return symbols;
 }
 
 void Paper::addContent(const std::string& message) {

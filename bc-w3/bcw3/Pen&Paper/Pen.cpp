@@ -7,11 +7,11 @@ Pen::Pen(int inkCapacity) : inkCapacity(inkCapacity), inkAmount(inkCapacity) {}
 Pen::~Pen() {}
 
 int Pen::getInkAmount() const {
-    return this->inkAmount;
+    return inkAmount;
 }
 
 int Pen::getInkCapacity() const {
-    return this->inkCapacity;
+    return inkCapacity;
 }
 
 void Pen::write(Paper& paper, const std::string& message) {
@@ -27,5 +27,5 @@ void Pen::write(Paper& paper, const std::string& message) {
 }
 
 void Pen::refill() {
-    this->inkAmount = this->inkCapacity;
+    inkAmount = inkCapacity;
 }

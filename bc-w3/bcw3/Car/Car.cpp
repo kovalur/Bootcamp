@@ -12,23 +12,23 @@ Car::Car(double capacity, double consumption,
 Car::~Car() {}
 
 double Car::getFuelAmount() const {
-    return this->fuelAmount;
+    return fuelAmount;
 }
 
 double Car::getFuelCapacity() const {
-    return this->fuelCapacity;
+    return fuelCapacity;
 }
 
 double Car::getFuelConsumption() const {
-    return this->fuelConsumption;
+    return fuelConsumption;
 }
 
 const Point& Car::getLocation() const {
-    return this->location;
+    return location;
 }
 
 const std::string& Car::getModel() const {
-    return this->model;
+    return model;
 }
 
 void Car::drive(const Point& destination) {

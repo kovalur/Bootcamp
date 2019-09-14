@@ -7,11 +7,11 @@ Vector::Vector(double x, double y) : x(x), y(y) {}
 Vector::~Vector() {}
 
 double Vector::getX() const {
-    return this->x;
+    return x;
 }
 
 double Vector::getY() const {
-    return this->y;
+    return y;
 }
 
 void Vector::setX(double value) {

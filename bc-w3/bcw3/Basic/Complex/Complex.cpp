@@ -6,11 +6,11 @@ Complex::Complex(double real, double imaginary) : real(real), imaginary(imaginar
 Complex::~Complex() {}
 
 double Complex::getReal() const {
-    return this->real;
+    return real;
 }
 
 double Complex::getImaginary() const {
-    return this->imaginary;
+    return imaginary;
 }
 
 bool Complex::operator==(const Complex& other) const {

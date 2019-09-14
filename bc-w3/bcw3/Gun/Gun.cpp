@@ -8,44 +8,44 @@ Gun::Gun(const std::string& model, int capacity)
 Gun::~Gun() {}
 
 int Gun::getAmount() const {
-    return this->amount;
+    return amount;
 }
 
 int Gun::getCapacity() const {
-    return this->capacity;
+    return capacity;
 }
 
 bool Gun::ready() const {
-    return this->isReady;
+    return isReady;
 }
 
 const std::string& Gun::getModel() const {
-    return this->model;
+    return model;
 }
 
 int Gun::getTotalShots() const {
-    return this->totalShots;
+    return totalShots;
 }
 
 void Gun::prepare() {
-    if ( !this->isReady ) {
-        this->isReady = !this->isReady;
+    if ( !isReady ) {
+        isReady = !isReady;
     }
 }
 
 void Gun::reload() {
-    this->amount = this->capacity;
+    amount = capacity;
 }
 
 void Gun::shoot() {
-    if ( !this->isReady ) {
+    if ( !isReady ) {
         throw NotReady();
     }
-    if ( this->amount == 0 ) {
+    if ( amount == 0 ) {
         throw OutOfRounds();
     }
-    this->amount -= 1;
-    this->totalShots += 1;
+    amount -= 1;
+    totalShots += 1;
     std::cout << "Bang!" << std::endl;
 }
 
