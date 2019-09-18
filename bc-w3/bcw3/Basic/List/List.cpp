@@ -42,7 +42,7 @@ void List::insert(int value, int index) {
         int* newArray;
         
         if ( newCapacity == this->capacity ) {
-            newCapacity += 1;
+            newCapacity += 5;
         }
         
         newArray = (int*)realloc(this->array, sizeof(int)*newCapacity);
