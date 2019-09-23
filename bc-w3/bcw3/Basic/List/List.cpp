@@ -78,7 +78,47 @@ int List::pop_back() {
 }
 
 void List::sort() {
-    // TODO: choose algorithm and implement sort functionality
+    int stack[this->current];
+    int top = -1;
+    
+    if ( this->current < 2 ) {
+        return;
+    }
+    
+    stack[++top] = 0;
+    stack[++top] = this->current - 1;
+    
+    while ( top >= 0 ) {
+        int hi = stack[top--];
+        int lo = stack[top--];
+        int temp = array[hi];
+        int i = lo - 1;
+        int pivot;
+        
+        int index = hi - 1;
+        for ( int j = lo; j <= index; j++ ) {
+            if ( array[j] <= temp ) {
+                int buf = array[j];
+                
+                i += 1;
+                array[j] = array[i];
+                array[i] = buf;
+            }
+        }
+        pivot = i + 1;
+        array[hi] = array[pivot];
+        array[pivot] = temp;
+        
+        if ( pivot - 1 > lo ) {
+            stack[++top] = lo;
+            stack[++top] = pivot - 1;
+        }
+        
+        if ( pivot + 1 < hi ) {
+            stack[++top] = pivot + 1;
+            stack[++top] = hi;
+        }
+    }
 }
 
 int List::operator[](int index) const {

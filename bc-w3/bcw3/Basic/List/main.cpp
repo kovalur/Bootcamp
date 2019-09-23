@@ -5,13 +5,17 @@
 int main() {
     List listEvenNumbers;
     List listOddNumbers(10);
-    List list3;
-    
+    List list(11);
+
     for ( int i = 0, j = 0; i < listEvenNumbers.max_size(); i++, j+=2 ) {
         listEvenNumbers.insert(j, i);
     }
     for ( int i = 0, j = 1; i < listOddNumbers.max_size(); i++, j+=2 ) {
         listOddNumbers.insert(j, i);
+    }
+
+    for ( int i = 0, j = 11; i < list.max_size(); i++, j-- ) {
+        list.insert(j, i);
     }
     
     std::cout << "Printing list with even numbers:" << std::endl;
@@ -79,16 +83,20 @@ int main() {
     std::cout << listOddNumbers << std::endl;
     
     try {
-        list3.pop_back();
+        list.pop_back();
     } catch (ZeroLenException e) {
         std::cout << "List is empty." << std::endl;
     }
     
     try {
-        list3.erase(0);
+        list.erase(0);
     } catch (ZeroLenException e) {
         std::cout << "List is empty." << std::endl;
     }
+    
+    list.sort();
+    std::cout << "Printing sorted list" << std::endl;
+    std::cout << list << std::endl;
     
     return 0;
 }
