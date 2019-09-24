@@ -95,8 +95,7 @@ void List::sort() {
         int i = lo - 1;
         int pivot;
         
-        int index = hi - 1;
-        for ( int j = lo; j <= index; j++ ) {
+        for ( int j = lo; j < hi; j++ ) {
             if ( array[j] <= temp ) {
                 int buf = array[j];
                 
