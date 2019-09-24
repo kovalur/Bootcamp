@@ -91,21 +91,21 @@ void List::sort() {
     while ( top >= 0 ) {
         int hi = stack[top--];
         int lo = stack[top--];
-        int temp = array[hi];
+        int temp = this->array[hi];
         int i = lo - 1;
         int pivot;
         
         for ( int j = lo; j < hi; j++ ) {
-            if ( array[j] <= temp ) {
-                int buf = array[j];
+            if ( this->array[j] <= temp ) {
+                int buf = this->array[j];
                 
-                array[j] = array[++i];
-                array[i] = buf;
+                this->array[j] = this->array[++i];
+                this->array[i] = buf;
             }
         }
         pivot = i + 1;
-        array[hi] = array[pivot];
-        array[pivot] = temp;
+        this->array[hi] = this->array[pivot];
+        this->array[pivot] = temp;
         
         if ( pivot - 1 > lo ) {
             stack[++top] = lo;
