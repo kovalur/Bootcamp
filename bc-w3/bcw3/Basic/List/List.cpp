@@ -100,8 +100,7 @@ void List::sort() {
             if ( array[j] <= temp ) {
                 int buf = array[j];
                 
-                i += 1;
-                array[j] = array[i];
+                array[j] = array[++i];
                 array[i] = buf;
             }
         }
