@@ -85,8 +85,10 @@ void List::sort() {
         return;
     }
     
-    stack[++top] = 0;
-    stack[++top] = this->current - 1;
+    top += 1;
+    stack[top] = 0;
+    top += 1;
+    stack[top] = this->current - 1;
     
     while ( top >= 0 ) {
         int hi = stack[top--];
@@ -108,13 +110,17 @@ void List::sort() {
         this->array[pivot] = temp;
         
         if ( pivot - 1 > lo ) {
-            stack[++top] = lo;
-            stack[++top] = pivot - 1;
+            top += 1;
+            stack[top] = lo;
+            top += 1;
+            stack[top] = pivot - 1;
         }
         
         if ( pivot + 1 < hi ) {
-            stack[++top] = pivot + 1;
-            stack[++top] = hi;
+            top += 1;
+            stack[top] = pivot + 1;
+            top += 1;
+            stack[top] = hi;
         }
     }
 }
