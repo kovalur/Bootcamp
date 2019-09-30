@@ -23,7 +23,7 @@ void Vector::setY(double value) {
 }
 
 double Vector::len() const {
-    return hypot(this->x, this->y);
+    return hypot(x, y);
 }
 
 bool Vector::operator==(const Vector& other) const {
@@ -49,6 +49,7 @@ Vector Vector::operator+(const Vector& other) const {
     
     sumOfVectors.x = this->x + other.x;
     sumOfVectors.y = this->y + other.y;
+    
     return sumOfVectors;
 }
 
@@ -57,10 +58,12 @@ Vector Vector::operator-(const Vector& other) const {
     
     diffOfVectors.x = this->x - other.x;
     diffOfVectors.y = this->y - other.y;
+    
     return diffOfVectors;
 }
 
 std::ostream& operator<<(std::ostream& out, const Vector& vector) {
     out << '(' << vector.getX() << ", " << vector.getY() << ')';
+    
     return out;
 }
