@@ -36,7 +36,7 @@ public class Point implements Cloneable {
     }
     
     public String toString() {
-        return "(" + String.format("%.0f", this.x) + ", " + String.format("%.0f", this.y) + ")";
+        return "(" + this.x + ", " + this.y + ")";
     }
     
     public Point clone() throws CloneNotSupportedException {
