@@ -11,6 +11,7 @@ bin-release/
 task.in
 task.out
 .vscode
+*.class
 
 # Executables
 *.swf
