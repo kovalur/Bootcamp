@@ -1,4 +1,4 @@
-public class Point {
+public class Point implements Cloneable {
     private double x;
     private double y;
     
@@ -37,5 +37,9 @@ public class Point {
     
     public String toString() {
         return "(" + String.format("%.0f", this.x) + ", " + String.format("%.0f", this.y) + ")";
+    }
+    
+    public Point clone() throws CloneNotSupportedException {
+        return (Point) super.clone();
     }
 }
