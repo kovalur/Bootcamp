@@ -74,5 +74,6 @@ std::ostream& operator<<(std::ostream& out, const Car& car) {
     out << "  * fuel capacity, l: " << car.getFuelCapacity() << ';' << '\n';
     out << "  * fuel ammount, l: " << car.getFuelAmount() << ';' << '\n';
     out << "  * fuel consumption, l/km: " << car.getFuelConsumption() << '.' << '\n';
+    
     return out;
 }
