@@ -56,5 +56,6 @@ std::ostream& operator<<(std::ostream& out, const Gun& gun) {
     out << "  * bullets in magazine: " << gun.getAmount() << ';' << '\n';
     out << "  * is gun ready for usage: " << (gun.ready() ? "Yes" : "No") << ';' << '\n';
     out << "  * number of shots fired: " << gun.getTotalShots() << '.' << '\n';
+    
     return out;
 }
