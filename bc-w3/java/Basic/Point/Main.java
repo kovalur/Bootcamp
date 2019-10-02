@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Point x = new Point(2, 7);
-        Point y = new Point(3, 8);
+        Point x = new Point(2.5, 7.6);
+        Point y = new Point(3.6, 8.5);
         Point z = new Point();
         
         System.out.println("x: " + x);

@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Point implements Cloneable {
     private double x;
     private double y;
@@ -36,7 +38,9 @@ public class Point implements Cloneable {
     }
     
     public String toString() {
-        return "(" + this.x + ", " + this.y + ")";
+        DecimalFormat fmt = new DecimalFormat("######.######");
+        
+        return "(" + fmt.format(this.x) + ", " + fmt.format(this.y) + ")";
     }
     
     public Point clone() throws CloneNotSupportedException {
