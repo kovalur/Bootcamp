@@ -65,5 +65,6 @@ std::ostream& operator<<(std::ostream& out, const Complex& complex) {
     out << std::showpos;
     out << complex.getImaginary() << 'i';
     out << std::noshowpos;
+    
     return out; 
 }

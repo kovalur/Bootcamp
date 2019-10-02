@@ -2,8 +2,8 @@
 #include "Complex.h"
 
 int main() {
-    Complex a(-1, 2);
-    Complex b(1, -2);
+    Complex a(-1.1, 2.2);
+    Complex b(1.2, -2.1);
     Complex c;
     
     std::cout << "a: " << a << std::endl;
