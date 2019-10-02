@@ -2,8 +2,8 @@
 #include "Point.h"
 
 int main() {
-    Point x(2, 7);
-    Point y(3, 8);
+    Point x(2.5, 7.6);
+    Point y(3.6, 8.5);
     Point z;
     
     std::cout << "x: " << x << std::endl;
