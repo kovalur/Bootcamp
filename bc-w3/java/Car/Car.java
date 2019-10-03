@@ -37,11 +37,11 @@ public class Car {
         return model;
     }
     
-    public void drive(Point destination) throws OutOfFuel, ToMuchFuel {
+    public void drive(Point destination) throws OutOfFuelException, ToMuchFuelException {
         double fuelNeeded = this.location.distance(destination) * this.fuelConsumption;
         
         if ( fuelNeeded > this.fuelCapacity ) {
-            throw new OutOfFuel();
+            throw new OutOfFuelException();
         }
         
         if ( fuelNeeded > this.fuelAmount ) {
@@ -51,11 +51,11 @@ public class Car {
         this.fuelAmount -= fuelNeeded;
     }
     
-    public void drive(double x, double y) throws OutOfFuel, ToMuchFuel {
+    public void drive(double x, double y) throws OutOfFuelException, ToMuchFuelException {
         double fuelNeeded = this.location.distance(new Point(x, y)) * this.fuelConsumption;
         
         if ( fuelNeeded > this.fuelCapacity ) {
-            throw new OutOfFuel();
+            throw new OutOfFuelException();
         }
         
         if ( fuelNeeded > this.fuelAmount ) {
@@ -65,11 +65,11 @@ public class Car {
         this.fuelAmount -= fuelNeeded;
     }
     
-    public void refill(double fuel) throws ToMuchFuel {
+    public void refill(double fuel) throws ToMuchFuelException {
         double fuelAfterRefill = this.fuelAmount + fuel;
         
         if ( fuelAfterRefill > this.fuelCapacity ) {
-            throw new ToMuchFuel();
+            throw new ToMuchFuelException();
         }
         this.fuelAmount = fuelAfterRefill;
     }

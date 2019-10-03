@@ -47,12 +47,12 @@ public class Gun {
         amount = capacity;
     }
     
-    public void shoot() throws NotReady, OutOfRounds {
+    public void shoot() throws NotReadyException, OutOfRoundsException {
         if ( !isReady ) {
-            throw new NotReady();
+            throw new NotReadyException();
         }
         if ( amount == 0 ) {
-            throw new OutOfRounds();
+            throw new OutOfRoundsException();
         }
         amount -= 1;
         totalShots += 1;

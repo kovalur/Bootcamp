@@ -11,9 +11,9 @@ public class Unit {
         this.damage = dmg;
     }
     
-    private void ensureIsAlive() throws UnitIsDead {
+    private void ensureIsAlive() throws UnitIsDeadException {
         if ( hitPoints == 0 ) {
-            throw new UnitIsDead();
+            throw new UnitIsDeadException();
         }
     }
     
@@ -42,7 +42,7 @@ public class Unit {
         
         try {
             this.ensureIsAlive();
-        } catch (UnitIsDead e) {
+        } catch (UnitIsDeadException e) {
             return;
         }
         
@@ -58,7 +58,7 @@ public class Unit {
         
         try {
             this.ensureIsAlive();
-        } catch (UnitIsDead e) {
+        } catch (UnitIsDeadException e) {
             return;
         }
         
@@ -72,7 +72,7 @@ public class Unit {
     public void attack(Unit enemy) {
         try {
             this.ensureIsAlive();
-        } catch (UnitIsDead e) {
+        } catch (UnitIsDeadException e) {
             return;
         }
         

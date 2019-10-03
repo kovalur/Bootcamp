@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) throws NotReady, OutOfRounds {
+    public static void main(String[] args) throws NotReadyException, OutOfRoundsException {
         Gun beretta = new Gun();
         Gun colt = new Gun("Colt", 2);
         
@@ -17,13 +17,13 @@ public class Main {
         
         try {
             colt.shoot();
-        } catch (OutOfRounds e) {
+        } catch (OutOfRoundsException e) {
             System.out.println("No bullets left.");
         }
         
         try {
             beretta.shoot();
-        } catch (NotReady e) {
+        } catch (NotReadyException e) {
             System.out.println("Gun is not prepared for shooting.");
         }
     }

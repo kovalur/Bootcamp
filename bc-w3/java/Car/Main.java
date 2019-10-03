@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) throws ToMuchFuel, OutOfFuel, CloneNotSupportedException {
+    public static void main(String[] args) throws ToMuchFuelException, OutOfFuelException, CloneNotSupportedException {
         Car car = new Car();
         
         System.out.println(car);
@@ -8,13 +8,13 @@ public class Main {
         
         try {
             car.drive(50, 86.6025403785);
-        } catch (OutOfFuel e) {
+        } catch (OutOfFuelException e) {
             System.out.println("Size of fuel tank is too small for your journey.");
         }
         
         try {
             car.refill(61);
-        } catch (ToMuchFuel e) {
+        } catch (ToMuchFuelException e) {
             System.out.println("You can't fuel more of tank capacity.");
         }
         
