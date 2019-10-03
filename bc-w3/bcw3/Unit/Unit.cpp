@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Unit.h"
 
 Unit::Unit(const std::string& name, int hp, int dmg)
