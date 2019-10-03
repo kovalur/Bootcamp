@@ -78,5 +78,6 @@ std::ostream& operator<<(std::ostream& out, const Unit& unit) {
     out << "  * damage: " << unit.getDamage() << ';' << '\n';
     out << "  * hit points: " << unit.getHitPoints() << ';' << '\n';
     out << "  * hit points limit: " << unit.getHitPointsLimit() << '.' << '\n';
+    
     return out;
 }
