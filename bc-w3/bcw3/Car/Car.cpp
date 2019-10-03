@@ -34,11 +34,11 @@ const std::string& Car::getModel() const {
 
 void Car::drive(const Point& destination) {
     double fuelNeeded = this->location.distance(destination) * this->fuelConsumption;
-
+    
     if ( fuelNeeded > this->fuelCapacity ) {
         throw OutOfFuel();
     }
-
+    
     if ( fuelNeeded > this->fuelAmount ) {
         this->refill(fuelNeeded-this->fuelAmount);
     }
@@ -48,11 +48,11 @@ void Car::drive(const Point& destination) {
 
 void Car::drive(double x, double y) {
     double fuelNeeded = this->location.distance(Point(x, y)) * this->fuelConsumption;
-
+    
     if ( fuelNeeded > this->fuelCapacity ) {
         throw OutOfFuel();
     }
-
+    
     if ( fuelNeeded > this->fuelAmount ) {
         this->refill(fuelNeeded-this->fuelAmount);
     }
