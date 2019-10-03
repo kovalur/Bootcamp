@@ -21,6 +21,9 @@ int main() {
     
     paper.show();
     
+    std::cout << "Pen ink amount: " << pen.getInkAmount() << std::endl;
+    std::cout << "Pen ink capacity: " << pen.getInkCapacity() << std::endl;
+    
     pen.refill();
     std::cout << "Pen ink amount: " << pen.getInkAmount() << std::endl;
     

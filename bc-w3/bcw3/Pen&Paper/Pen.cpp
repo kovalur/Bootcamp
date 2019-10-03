@@ -15,15 +15,17 @@ int Pen::getInkCapacity() const {
 }
 
 void Pen::write(Paper& paper, const std::string& message) {
-    std::string textToWrite = message.substr(0, this->inkAmount);
-    int symbolsBefore = paper.getSymbols();
-    
     if ( this->inkAmount == 0 ) {
         throw OutOfInk();
     }
     
-    paper.addContent(textToWrite);
-    this->inkAmount -= paper.getSymbols() - symbolsBefore;
+    if ( message.length() > this->inkAmount ) {
+        paper.addContent(message.substr(0, this->inkAmount));
+        this->inkAmount = 0;
+        return;
+    }
+    paper.addContent(message);
+    this->inkAmount -= message.length();
 }
 
 void Pen::refill() {
