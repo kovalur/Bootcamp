@@ -32,7 +32,15 @@ const std::string& Unit::getName() const {
 void Unit::addHitPoints(int hp) {
     int newHp = this->hitPoints + hp;
     
-    this->ensureIsAlive();
+    if ( hp <= 0 ) {
+        return;
+    }
+    
+    try {
+        this->ensureIsAlive();
+    } catch (UnitIsDead e) {
+        return;
+    }
     
     if ( newHp > this->hitPointsLimit ) {
         this->hitPoints = this->hitPointsLimit;
@@ -44,7 +52,11 @@ void Unit::addHitPoints(int hp) {
 void Unit::takeDamage(int dmg) {
     int newHp = this->hitPoints - dmg;
     
-    this->ensureIsAlive();
+    try {
+        this->ensureIsAlive();
+    } catch (UnitIsDead e) {
+        return;
+    }
     
     if ( newHp > 0 ) {
         this->hitPoints = newHp;
@@ -54,7 +66,11 @@ void Unit::takeDamage(int dmg) {
 }
 
 void Unit::attack(Unit& enemy) {
-    this->ensureIsAlive();
+    try {
+        this->ensureIsAlive();
+    } catch (UnitIsDead e) {
+        return;
+    }
     
     enemy.takeDamage(this->damage);
     if ( enemy.hitPoints > 0 ) {

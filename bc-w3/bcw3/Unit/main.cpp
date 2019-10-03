@@ -8,14 +8,16 @@ int main() {
     std::cout << barbarian << std::endl;
     std::cout << knight << std::endl;
     
-    try {
-        barbarian.attack(knight);
-        knight.attack(barbarian);
-        barbarian.attack(knight);
-        knight.attack(barbarian);
-    } catch (UnitIsDead e) {
-        std::cout << "Unit is dead." << std::endl;
-    }
+    barbarian.attack(knight);
+    knight.attack(barbarian);
+    barbarian.attack(knight);
+
+    std::cout << barbarian << std::endl;
+    std::cout << knight << std::endl;
+
+    knight.addHitPoints(46);
+    barbarian.addHitPoints(51);
+    knight.attack(barbarian);
     
     std::cout << barbarian << std::endl;
     std::cout << knight << std::endl;
