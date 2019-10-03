@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Paper.h"
 
 Paper::Paper(int maxSymbols) : maxSymbols(maxSymbols), symbols(0), content("") {}
