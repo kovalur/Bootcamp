@@ -74,6 +74,7 @@ int List::pop_back() {
         throw ZeroLenException();
     }
     this->current -= 1;
+    
     return this->array[this->current];
 }
 
@@ -144,6 +145,7 @@ bool List::operator==(const List& other) const {
             }
         }
     }
+    
     return isEqual;
 }
 
