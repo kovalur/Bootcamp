@@ -127,20 +127,21 @@ void List::sort() {
 }
 
 int List::operator[](int index) const {
-    return this->find(index);
+    return this->array[index];
 }
 
 bool List::operator==(const List& other) const {
     bool isEqual = true;
-    
+    int thisLast = this->current - 1;
+
     for ( int i = 0; i < other.current && isEqual; i++ ) {
         int otherValue = other.array[i];
-        int thisLast = this->current - 1;
         
         for ( int j = 0; j < this->current; j++ ) {
             if ( this->array[j] == otherValue ) {
                 break;
-            } else if ( j == thisLast ) {
+            }
+            if ( j == thisLast ) {
                 isEqual = false;
             }
         }
