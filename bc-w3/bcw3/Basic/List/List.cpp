@@ -165,6 +165,7 @@ bool List::operator==(const List& other) const {
             }
         }
     }
+    free(thisArrayCopy);
     
     return isEqual;
 }
