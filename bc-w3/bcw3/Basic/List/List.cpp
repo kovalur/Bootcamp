@@ -132,16 +132,35 @@ int List::operator[](int index) const {
 
 bool List::operator==(const List& other) const {
     bool isEqual = true;
-    int thisLast = this->current - 1;
+    int thisArrayCopyLen = this->current;
+    int thisArrayCopyLast = thisArrayCopyLen - 1;
+    int* thisArrayCopy;
+    
+    if ( this->current != other.current ) {
+        return false;
+    }
+    
+    thisArrayCopy = (int*)malloc(sizeof(int) * thisArrayCopyLen);
+    if ( thisArrayCopy == NULL ) {
+        throw OutOfMemoryException();
+    }
+    
+    for ( int i = 0; i < thisArrayCopyLen; i++ ) {
+        thisArrayCopy[i] = this->array[i];
+    }
     
     for ( int i = 0; i < other.current && isEqual; i++ ) {
         int otherValue = other.array[i];
         
-        for ( int j = 0; j < this->current; j++ ) {
-            if ( this->array[j] == otherValue ) {
+        for ( int j = 0; j < thisArrayCopyLen; j++ ) {
+            if ( thisArrayCopy[j] == otherValue ) {
+                for ( int k = j; k < thisArrayCopyLast; k++ ) {
+                    thisArrayCopy[k] = thisArrayCopy[k+1];
+                }
+                thisArrayCopyLen -= 1;
+                thisArrayCopyLast -= 1;
                 break;
-            }
-            if ( j == thisLast ) {
+            } else if ( j == thisArrayCopyLast ) {
                 isEqual = false;
             }
         }

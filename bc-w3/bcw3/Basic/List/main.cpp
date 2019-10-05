@@ -25,6 +25,9 @@ int main() {
         list2.insert(j, i);
     }
     
+    list2.pop_back();
+    list2.insert(2, list2.size() - 1);
+    
     std::cout << "Printing list with even numbers:" << std::endl;
     std::cout << listEvenNumbers << std::endl;
     std::cout << "Printing list with odd numbers:" << std::endl;
@@ -56,7 +59,8 @@ int main() {
     
     std::cout << "Capacity of odd numbers list: " << listOddNumbers.max_size() << std::endl;
     std::cout << "Current size of odd numbers list: " << listOddNumbers.size() << std::endl;
-    
+
+    list.sort();
     if (list != list2) {
         std::cout << "Lists aren't equal." << std::endl;
     } else {
@@ -88,9 +92,10 @@ int main() {
     
     std::cout << "Printing unsorted list" << std::endl;
     std::cout << list << std::endl;
-    list.sort();
     std::cout << "Printing sorted list" << std::endl;
     std::cout << list << std::endl;
+    
+    std::cout << list2 << std::endl;
     
     return 0;
 }
