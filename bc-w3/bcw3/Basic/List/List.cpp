@@ -91,7 +91,7 @@ void List::sort() {
     top += 1;
     stack[top] = this->current - 1;
     
-    while ( top >= 0 ) {
+    while ( top > 0 ) {
         int hi = stack[top--];
         int lo = stack[top--];
         int temp = this->array[hi];
