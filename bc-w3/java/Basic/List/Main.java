@@ -43,16 +43,13 @@ public class Main {
     System.out.println("Capacity of even numbers list: " + listEvenNumbers.max_size());
     System.out.println("Current size of even numbers list: " + listEvenNumbers.size());
     
-    // try {
-    //     for ( int i = listOddNumbers.size(), j = listOddNumbers.find(i-1) + 2; i < 18; i++, j+=2 ) {
-    //         listOddNumbers.insert(j, i);
-    //     }
-    // } 
-    // catch (OutOfMemoryException e) {
-    //     System.out.println("Heap is full.");
-    // }
-    for ( int i = listOddNumbers.size(), j = listOddNumbers.find(i-1) + 2; i < 18; i++, j+=2 ) {
-        listOddNumbers.insert(j, i);
+    try {
+        for ( int i = listOddNumbers.size(), j = listOddNumbers.find(i-1) + 2; i < 18; i++, j+=2 ) {
+            listOddNumbers.insert(j, i);
+        }
+    } 
+    catch (OutOfMemoryException e) {
+        System.out.println("Heap is full.");
     }
     
     System.out.println("Printing list with odd numbers:");
@@ -61,6 +58,7 @@ public class Main {
     System.out.println("Capacity of odd numbers list: " + listOddNumbers.max_size());
     System.out.println("Current size of odd numbers list: " + listOddNumbers.size());
     
+    list.sort();
     if ( !list.equals(list2) ) {
         System.out.println("Lists aren't equal.");
     } else {
@@ -92,9 +90,9 @@ public class Main {
     
     System.out.println("Printing unsorted list");
     System.out.println(list);
-    list.sort();
     System.out.println("Printing sorted list");
     System.out.println(list);
+    
     System.out.println(list2);
     }
 }
