@@ -58,7 +58,6 @@ public class Main {
     System.out.println("Capacity of odd numbers list: " + listOddNumbers.max_size());
     System.out.println("Current size of odd numbers list: " + listOddNumbers.size());
     
-    list.sort();
     if ( !list.equals(list2) ) {
         System.out.println("Lists aren't equal.");
     } else {
@@ -89,10 +88,11 @@ public class Main {
     }
     
     System.out.println("Printing unsorted list");
-    System.out.println(list);
-    System.out.println("Printing sorted list");
-    System.out.println(list);
-    
     System.out.println(list2);
+    list2.sort();
+    System.out.println("Printing sorted list");
+    System.out.println(list2);
+    
+    System.out.println(list);
     }
 }

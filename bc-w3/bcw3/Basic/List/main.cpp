@@ -59,8 +59,7 @@ int main() {
     
     std::cout << "Capacity of odd numbers list: " << listOddNumbers.max_size() << std::endl;
     std::cout << "Current size of odd numbers list: " << listOddNumbers.size() << std::endl;
-
-    list.sort();
+    
     if (list != list2) {
         std::cout << "Lists aren't equal." << std::endl;
     } else {
@@ -91,11 +90,12 @@ int main() {
     }
     
     std::cout << "Printing unsorted list" << std::endl;
-    std::cout << list << std::endl;
-    std::cout << "Printing sorted list" << std::endl;
-    std::cout << list << std::endl;
-    
     std::cout << list2 << std::endl;
+    list2.sort();
+    std::cout << "Printing sorted list" << std::endl;
+    std::cout << list2 << std::endl;
+    
+    std::cout << list << std::endl;
     
     return 0;
 }
