@@ -38,21 +38,35 @@ void printArray(int array[], int len)
 //     }
 // }
 
-// With optimization
+// // With optimization
+// void insertSort(int array[], int len) {
+//     for ( int i = 1; i < len; i++ ) {
+//         int idx = i;
+//         int temp = array[i];
+        
+//         for ( int j = i - 1; j >= 0; j-- ) {
+//             if ( array[i] < array[j] ) {
+//                 idx = j;
+//             }
+//         }
+//         for ( int k = i; k > idx; k-- ) {
+//             array[k] = array[k-1];
+//         }
+//         array[idx] = temp;
+//     }
+// }
+
+// Even more optimizations
 void insertSort(int array[], int len) {
     for ( int i = 1; i < len; i++ ) {
-        int idx = i;
-        int temp = array[i];
+        int key = array[i];
+        int j = i - 1;
         
-        for ( int j = i - 1; j >= 0; j-- ) {
-            if ( array[i] < array[j] ) {
-                idx = j;
-            }
+        while ( j >= 0 && array[j] > key ) {
+            array[j+1] = array[j];
+            j -= 1;
         }
-        for ( int k = i; k > idx; k-- ) {
-            array[k] = array[k-1];
-        }
-        array[idx] = temp;
+        array[j+1] = key;
     }
 }
 
