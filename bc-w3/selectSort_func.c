@@ -1,28 +1,29 @@
 #include <stdio.h>
 
 void selectSort(int array[], int size) {
-    for ( int i = 0; i < size; i++ ) {
-        int minIndex = i;
-
+    int last = size - 1;
+    
+    for ( int i = 0; i < last; i++ ) {
+        int minValueIdx = i;
+        
         for ( int j = i + 1; j < size; j++ ) {
-            if ( array[j] < array[minIndex] ) {
-                minIndex = j;
+            if ( array[j] < array[minValueIdx] ) {
+                minValueIdx = j;
             }
         }
-        if ( minIndex != i ) {
-            // Shift instead of pure swap to make algorithm stable
-            int temp = array[minIndex];
-
-            for ( int k = minIndex; k > i; k-- ) {
-                array[k] = array[k-1];
-            }
-            array[i] = temp;
+        
+        int temp = array[minValueIdx];
+        
+        // Shifting instead of swapping to make algorithm stable
+        for ( int k = minValueIdx; k > i; k-- ) {
+            array[k] = array[k-1];
         }
+        array[i] = temp;
+        
+        // if ( minValueIdx != i ) {
+        //     int temp = array[minValueIdx];
 
-        // if ( minIndex != i ) {
-        //     int temp = array[minIndex];
-
-        //     array[minIndex] = array[i];
+        //     array[minValueIdx] = array[i];
         //     array[i] = temp;
         // }
     }
