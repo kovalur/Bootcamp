@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+void swap(int *a, int *b) {
+    int temp = *a;
+    
+    *a = *b;
+    *b = temp;
+}
+
 void selectSort(int array[], int size) {
     int last = size - 1;
     
@@ -12,20 +19,15 @@ void selectSort(int array[], int size) {
             }
         }
         
-        int temp = array[minValueIdx];
+        // int temp = array[minValueIdx];
         
-        // Shifting instead of swapping to make algorithm stable
-        for ( int k = minValueIdx; k > i; k-- ) {
-            array[k] = array[k-1];
-        }
-        array[i] = temp;
-        
-        // if ( minValueIdx != i ) {
-        //     int temp = array[minValueIdx];
-
-        //     array[minValueIdx] = array[i];
-        //     array[i] = temp;
+        // // Shifting instead of swapping to make algorithm stable
+        // for ( int k = minValueIdx; k > i; k-- ) {
+        //     array[k] = array[k-1];
         // }
+        // array[i] = temp;
+        
+        swap(&array[minValueIdx], &array[i]);
     }
 }
 
