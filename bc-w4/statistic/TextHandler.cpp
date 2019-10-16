@@ -98,7 +98,7 @@ void TextHandler::parseText() {
     char symbol;
     std::string word = "";
     // int counter = 0;
-    std::set<char> wordSeparators = {0xA, ' ', '!', '"', '(', ')', ',', '.', ':', ';', '?'};
+    std::set<char> wordSeparators = {0x9, 0xA, ' ', '!', '"', '(', ')', ',', '.', ':', ';', '?'};
     
     for ( ; file.get(symbol); ) {
         if ( isLetter(symbol) ) {
