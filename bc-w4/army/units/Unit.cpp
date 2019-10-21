@@ -20,6 +20,22 @@ int Unit::getDamage() const {
     return this->damage;
 }
 
+int Unit::getHitPoints() const {
+    return this->state->getHitPoints();
+}
+
+int Unit::getHitPointsLimit() const {
+    return this->state->getHitPointsLimit();
+}
+
+void Unit::setHitPoints(int hitPoints) {
+    this->state->setHitPoints(hitPoints);
+}
+
+void Unit::setHitPointsLimit(int hitPointsLimit) {
+    this->state->setHitPointsLimit(hitPointsLimit);
+}
+
 void Unit::counterAttack(Unit& enemy) {
     int newHitPoints = this->state->getHitPoints() - enemy.damage / 2;
     
@@ -41,7 +57,7 @@ void Unit::attack(Unit& enemy) {
 }
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit) {
-    out << "Unit " << unit.getName() << " has " << unit.state->getHitPoints();
-    out << "(" << unit.state->getHitPointsLimit() << ")" << " hit points, ";
+    out << "Unit " << unit.getName() << " has " << unit.getHitPoints();
+    out << "(" << unit.getHitPointsLimit() << ")" << " hit points, ";
     out << "its damage is " << unit.getDamage() << ".";
 }

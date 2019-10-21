@@ -6,15 +6,20 @@
 #include <iostream>
 
 class SpellCaster : public Unit {
+    protected:
+        StateMagic* stateMagic;
     private:
         int magicDamage;
     public:
-        StateMagic* stateMagic;
         SpellCaster(int magicDamage,
                     int damage, int hitPoints, std::string name, int mana);
         ~SpellCaster();
         
         int getMagicDamage() const;
+        
+        // wrappers over magic state getters
+        int getMana() const;
+        int getManaLimit() const;
         
         void magicAttack(Unit& enemy);
         void magicCounterAttack(Unit& enemy);

@@ -6,19 +6,19 @@
 class UnitIsDead {};
 
 class State {
-    private:
+    protected:
         int hitPoints;
         int hitPointsLimit;
     public:
         State(int hitPoints);
         ~State();
         
-        void ensureIsAlive();
-        
         int getHitPoints() const;
         int getHitPointsLimit() const;
         void setHitPoints(int hitPoints);
         void setHitPointsLimit(int hitPointsLimit);
+        
+        void ensureIsAlive();
         
         void addHitPoints(int hitPoints);
         void takeDamage(int damage);

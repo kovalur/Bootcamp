@@ -10,12 +10,6 @@ State::~State() {
     std::cout << "State object destroyed" << std::endl;
 }
 
-void State::ensureIsAlive() {
-    if ( this->hitPoints == 0 ) {
-        throw UnitIsDead();
-    }
-}
-
 int State::getHitPoints() const {
     return this->hitPoints;
 }
@@ -30,6 +24,12 @@ void State::setHitPoints(int hitPoints) {
 
 void State::setHitPointsLimit(int hitPointsLimit) {
     this->hitPointsLimit = hitPointsLimit;
+}
+
+void State::ensureIsAlive() {
+    if ( this->hitPoints == 0 ) {
+        throw UnitIsDead();
+    }
 }
 
 void State::addHitPoints(int hitPoints) {
