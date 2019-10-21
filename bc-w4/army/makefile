@@ -10,7 +10,7 @@ Unit.o:
 	g++ -c units/Unit.cpp
 	
 SpellCaster.o:
-	g++ -c units/SpellCaster.cpp
+	g++ -c units/mages/SpellCaster.cpp
 	
 State.o:
 	g++ -c states/State.cpp

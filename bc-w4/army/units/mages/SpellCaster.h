@@ -1,7 +1,7 @@
 #ifndef SPELL_CASTER_H
 #define SPELL_CASTER_H
-#include "Unit.h"
-#include "../states/StateMagic.h"
+#include "../Unit.h"
+#include "../../states/StateMagic.h"
 
 #include <iostream>
 

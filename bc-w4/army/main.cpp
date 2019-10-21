@@ -1,5 +1,5 @@
 #include <iostream>
-#include "units/SpellCaster.h"
+#include "units/mages/SpellCaster.h"
 #include "units/Unit.h"
 
 int main() {
