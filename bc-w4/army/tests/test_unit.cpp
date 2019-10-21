@@ -7,6 +7,6 @@ TEST_CASE( "test Unit", "[Unit]" ) {
     
     REQUIRE( f1.getName() == "Ordinary Slodier" );
     REQUIRE( f1.getDamage() == 25 );
-    REQUIRE( f1.state->getHitPoints() == 120 );
-    REQUIRE( f1.state->getHitPointsLimit() == 120 );
+    REQUIRE( f1.getHitPoints() == 120 );
+    REQUIRE( f1.getHitPointsLimit() == 120 );
 }
