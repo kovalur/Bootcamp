@@ -10,6 +10,6 @@ SurgeOfLightning::~SurgeOfLightning() {
 }
 
 void SurgeOfLightning::action(Unit* target) {
-    target->takeDamage(this->actionPoints);
+    target->takeMagicDamage(this->actionPoints);
     target->counterAttack(this->owner);
 }

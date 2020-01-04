@@ -39,6 +39,10 @@ void Unit::takeDamage(int dmg) {
     this->state->takeDamage(dmg);
 }
 
+void Unit::takeMagicDamage(int dmg) {
+    this->state->takeMagicDamage(dmg);
+}
+
 void Unit::attack(Unit* enemy) {
     this->ability->attack(enemy);
 }

@@ -17,11 +17,11 @@ void MagicAbility::changeSpell(Spell* newSpell) {
 void MagicAbility::cast(Unit* target) {
     this->owner->ensureIsAlive();
     
-    this->owner->spendMana(this->spell->getCost());
     this->spell->action(target);
+    this->owner->spendMana(this->spell->getCost());
 }
 
 void MagicAbility::counterAttack(Unit* enemy) {
+    enemy->takeMagicDamage(this->spell->getActionPoints() / 2);
     this->owner->spendMana(this->spell->getCost() / 2);
-    enemy->takeDamage(this->spell->getActionPoints() / 2);
 }

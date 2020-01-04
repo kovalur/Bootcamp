@@ -3,5 +3,6 @@
 
 class UnitIsDeadException {};
 class OutOfManaException {};
+class NoMagicAffectException {};
 
 #endif //EXCEPTIONS_H

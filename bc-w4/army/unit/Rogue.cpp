@@ -8,7 +8,3 @@ Rogue::Rogue(const char* title, int hitPoints, int damage) : Unit(title, hitPoin
 Rogue::~Rogue() {
     std::cout << "Rogue object destroyed." << std::endl;
 }
-
-void Rogue::takeMagicDamage(int dmg) {
-    this->state->takeMagicDamage(dmg);
-}

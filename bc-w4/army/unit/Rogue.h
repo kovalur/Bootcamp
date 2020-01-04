@@ -8,8 +8,6 @@ class Rogue : public Unit {
     public:
         Rogue(const char* title, int hitPoints, int damage);
         virtual ~Rogue();
-        
-        void takeMagicDamage(int dmg);
 };
 
 #endif //ROGUE_H

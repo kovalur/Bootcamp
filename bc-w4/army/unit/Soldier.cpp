@@ -8,7 +8,3 @@ Soldier::Soldier(const char* title, int hitPoints, int damage) : Unit(title, hit
 Soldier::~Soldier() {
     std::cout << "Soldier object destroyed." << std::endl;
 }
-
-void Soldier::takeMagicDamage(int dmg) {
-    this->state->takeMagicDamage(dmg);
-}
