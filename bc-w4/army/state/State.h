@@ -25,6 +25,10 @@ class State {
         void addHitPoints(int hp);
         void takeDamage(int dmg);
         void takeMagicDamage(int dmg);
+        void increaseHp(int extraHp);
+        void decreaseHp(int extraHp);
+        void increaseDamage(int extraDmg);
+        void decreaseDamage(int extraDmg);
 };
 
 #endif //STATE_H

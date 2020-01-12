@@ -44,6 +44,40 @@ void State::addHitPoints(int hp) {
     this->hitPoints = total;
 }
 
+void State::increaseHp(int extraHp) {
+    this->ensureIsAlive();
+    
+    if ( extraHp > 0 ) {
+        this->hitPointsLimit += extraHp;
+        this->addHitPoints(extraHp);
+    }
+}
+
+void State::decreaseHp(int hp) {
+    this->ensureIsAlive();
+    
+    if ( hp > 0 && this->hitPointsLimit > hp ) {
+        this->hitPointsLimit -= hp;
+        this->_takeDamage(hp);
+    }
+}
+
+void State::increaseDamage(int extraDmg) {
+    this->ensureIsAlive();
+    
+    if ( extraDmg > 0 ) {
+        this->damage += extraDmg;
+    }
+}
+
+void State::decreaseDamage(int extraDmg) {
+    this->ensureIsAlive();
+    
+    if ( extraDmg > 0 && this->damage > extraDmg ) {
+        this->damage -= extraDmg;
+    }
+}
+
 void State::_takeDamage(int dmg) {
     this->ensureIsAlive();
     
