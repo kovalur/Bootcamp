@@ -1,7 +1,7 @@
 #include "Spell.h"
 
-Spell::Spell(int actionPoints, int cost)
-    : actionPoints(actionPoints),  cost(cost) {
+Spell::Spell(int actionPoints, int cost, SpellCaster* owner)
+    : actionPoints(actionPoints),  cost(cost), owner(owner) {
     std::cout << "Spell object initialized." << std::endl;
 }
 

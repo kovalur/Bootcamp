@@ -1,7 +1,7 @@
 all: tests.out
 
-tests.out: main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o Unit.o Soldier.o Rogue.o Berserker.o SpellCaster.o Wizard.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o MagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
-	g++ -o tests.out main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o Unit.o Soldier.o Rogue.o Berserker.o SpellCaster.o Wizard.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o MagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
+tests.out: main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o test_VampireAndWizardFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o SpellCaster.o Wizard.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o MagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
+	g++ -o tests.out main.o test_soldierAndRogueFight.o test_VampireAndWizardFight.o test_wizardAndBerserkerFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o SpellCaster.o Wizard.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o MagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
 
 main.o:
 	g++ -c main.cpp
@@ -11,6 +11,9 @@ test_soldierAndRogueFight.o:
 
 test_wizardAndBerserkerFight.o:
 	g++ -c test_wizardAndBerserkerFight.cpp
+
+test_VampireAndWizardFight.o:
+	g++ -c test_VampireAndWizardFight.cpp
 
 Unit.o:
 	g++ -c ../unit/Unit.cpp
@@ -24,6 +27,8 @@ Rogue.o:
 Berserker.o:
 	g++ -c ../unit/Berserker.cpp
 	
+Vampire.o:
+	g++ -c ../unit/Vampire.cpp
 SpellCaster.o:
 	g++ -c ../unit/mage/SpellCaster.cpp
 
@@ -44,6 +49,9 @@ DefaultAbility.o:
 
 RogueAbility.o:
 	g++ -c ../ability/RogueAbility.cpp
+	
+VampireAbility.o:
+	g++ -c ../ability/VampireAbility.cpp
 
 MagicAbility.o:
 	g++ -c ../ability/MagicAbility.cpp

@@ -7,8 +7,6 @@
 class SpellCaster;
 
 class SurgeOfLightning : public Spell {
-    protected:
-        SpellCaster* owner;
     public:
         SurgeOfLightning(int actionPoints, int cost, SpellCaster* owner);
         virtual ~SurgeOfLightning();
