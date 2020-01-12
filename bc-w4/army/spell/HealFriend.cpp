@@ -1,7 +1,7 @@
 #include "HealFriend.h"
 
-HealFriend::HealFriend(int actionPoints, int cost)
-    : Spell(actionPoints, cost) {
+HealFriend::HealFriend(int actionPoints, int cost, SpellCaster* owner)
+    : Spell(actionPoints, cost, owner) {
     std::cout << "HealFriend object initialized." << std::endl;
 }
 
