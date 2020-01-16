@@ -27,7 +27,9 @@ TEST_CASE( "wizard and healer can attack/heal each other", "[wizard][healer]" ) 
         REQUIRE( wizard.getMana() == 60 );
     }
     SECTION( "wizard attacks healer with magic, and healer then counterattacks with magic" ) {
-        healer.changeSpell("SurgeOfLightning");
+        try {
+            healer.changeSpell("SurgeOfLightning");
+        } catch ( NoSuchSpellException ) {}
         
         REQUIRE( std::strcmp(healer.getActiveSpellName(), "SurgeOfLightning") == 0 );
         

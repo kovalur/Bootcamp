@@ -38,7 +38,12 @@ void SpellCaster::spendMana(int cost) {
 }
 
 void SpellCaster::changeSpell(const char* spellName) {
-    this->magicAbility->changeSpell(this->spellBook[spellName]);
+    this->spellBookIt = this->spellBook.find(spellName);
+    
+    if ( this->spellBookIt == this->spellBook.end() ) {
+        throw NoSuchSpellException();
+    }
+    this->magicAbility->changeSpell(this->spellBookIt->second);
 }
 
 void SpellCaster::cast(Unit* target) {
