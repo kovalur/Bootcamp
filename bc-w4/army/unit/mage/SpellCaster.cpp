@@ -1,8 +1,8 @@
 #include "SpellCaster.h"
 
-SpellCaster::SpellCaster(const char* title, int hitPoints, int damage, int mana)
+SpellCaster::SpellCaster(const char* title, int hitPoints, int damage, int mana, TypeOfMage mageType)
     : Unit(title, hitPoints, damage),
-        stateMagic(new StateMagic(mana)) {
+        stateMagic(new StateMagic(mana)), mageType(mageType) {
             this->ability = new DefaultAbility(this);
             std::cout << "SpellCaster object initialized." << std::endl;
 }
@@ -21,6 +21,14 @@ int SpellCaster::getManaLimit() const {
     return this->stateMagic->getManaLimit();
 }
 
+TypeOfMage SpellCaster::getMageType() const {
+    return this->mageType;
+}
+
+const char* SpellCaster::getActiveSpellName() const {
+    return this->magicAbility->getSpellName();
+}
+
 void SpellCaster::addMana(int renewal) {
     this->stateMagic->addMana(renewal);
 }
@@ -29,8 +37,8 @@ void SpellCaster::spendMana(int cost) {
     this->stateMagic->spendMana(cost);
 }
 
-void SpellCaster::changeSpell(Spell* newSpell) {
-    this->magicAbility->changeSpell(newSpell);
+void SpellCaster::changeSpell(const char* spellName) {
+    this->magicAbility->changeSpell(this->spellBook[spellName]);
 }
 
 void SpellCaster::cast(Unit* target) {

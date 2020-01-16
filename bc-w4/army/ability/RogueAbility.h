@@ -1,5 +1,5 @@
-#ifndef ROGUEABILITY_H
-#define ROGUEABILITY_H
+#ifndef ROGUE_ABILITY_H
+#define ROGUE_ABILITY_H
 
 #include "Ability.h"
 
@@ -11,4 +11,4 @@ class RogueAbility : public Ability {
         virtual void attack(Unit* enemy);
 };
 
-#endif //ROGUEABILITY_H
+#endif //ROGUE_ABILITY_H

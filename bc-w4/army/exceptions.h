@@ -4,5 +4,6 @@
 class UnitIsDeadException {};
 class OutOfManaException {};
 class NoMagicAffectException {};
+class NoSuchSpellException {};
 
 #endif //EXCEPTIONS_H

@@ -2,7 +2,6 @@
 #define WIZARD_H
 
 #include "SpellCaster.h"
-#include "../../spell/SurgeOfLightning.h"
 
 class Wizard : public SpellCaster {
     public:

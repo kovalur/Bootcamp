@@ -1,7 +1,7 @@
 #include "SurgeOfLightning.h"
 
 SurgeOfLightning::SurgeOfLightning(int actionPoints, int cost, SpellCaster* owner)
-    : Spell(actionPoints, cost, owner) {
+    : Spell(actionPoints, cost, "SurgeOfLightning", owner, attacking) {
         std::cout << "SurgeOfLightning object initialized." << std::endl;
 }
 
@@ -10,6 +10,11 @@ SurgeOfLightning::~SurgeOfLightning() {
 }
 
 void SurgeOfLightning::action(Unit* target) {
-    target->takeMagicDamage(this->actionPoints);
+    int actionPoints = this->actionPoints;
+    
+    if ( this->owner->getMageType() != attacker ) {
+        actionPoints /= 2;
+    }
+    target->takeMagicDamage(actionPoints);
     target->counterAttack(this->owner);
 }

@@ -9,6 +9,14 @@ MagicAbility::~MagicAbility() {
     std::cout << "MagicAbility object destroyed." << std::endl;
 }
 
+const Spell* MagicAbility::getSpell() const {
+    return this->spell;
+}
+
+const char* MagicAbility::getSpellName() const {
+    return this->spell->getSpellName();
+}
+
 void MagicAbility::changeSpell(Spell* newSpell) {
     delete(this->spell);
     this->spell = newSpell;
@@ -22,6 +30,12 @@ void MagicAbility::cast(Unit* target) {
 }
 
 void MagicAbility::counterAttack(Unit* enemy) {
-    enemy->takeMagicDamage(this->spell->getActionPoints() / 2);
+    int actionPoints = this->spell->getActionPoints();
+    
+    if ( this->owner->getMageType() == healer ) {
+        actionPoints /= 2;
+    }
+    
+    enemy->takeMagicDamage( actionPoints / 2);
     this->owner->spendMana(this->spell->getCost() / 2);
 }

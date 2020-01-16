@@ -14,8 +14,11 @@ class MagicAbility {
         MagicAbility(SpellCaster* owner, Spell* spell);
         virtual ~MagicAbility();
         
+        const Spell* getSpell() const;
+        const char* getSpellName() const;
+        
         void changeSpell(Spell* newSpell);
-        virtual void cast(Unit* target);
+        void cast(Unit* target);
         virtual void counterAttack(Unit* enemy);
 };
 
