@@ -5,6 +5,10 @@ PriestMagicAbility::PriestMagicAbility(SpellCaster* owner, Spell* spell)
     std::cout << "PriestMagicAbility object initialized." << std::endl;
 }
 
+PriestMagicAbility::~PriestMagicAbility() {
+    std::cout << "PriestMagicAbility object destroyed." << std::endl;
+}
+
 void PriestMagicAbility::cast(Unit* target) {
     try {
         dynamic_cast<Undead&>(*target);
