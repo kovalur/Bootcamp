@@ -2,9 +2,11 @@
 #define UNIT_H
 
 #include <iostream>
+#include <typeinfo>
 
 #include "../state/State.h"
 #include "../ability/Ability.h"
+#include "../unit/Undead.h"
 
 class Ability;
 

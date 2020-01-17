@@ -7,6 +7,7 @@ Wizard::Wizard(const char* title, int hitPoints, int damage, int mana)
         this->spellBook.insert(std::pair<std::string, Spell*>
             ("HealFriend", new HealFriend(15, 15, this)));
         this->magicAbility = new MagicAbility(this, this->spellBook["SurgeOfLightning"]);
+        this->ability = new DefaultAbility(this);
         std::cout << "Wizard object initialized." << std::endl;
 }
 

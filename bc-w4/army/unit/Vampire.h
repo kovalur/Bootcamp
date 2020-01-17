@@ -4,7 +4,7 @@
 #include "Unit.h"
 #include "../ability/VampireAbility.h"
 
-class Vampire : public Unit {
+class Vampire : public Unit, public Undead {
     public:
         Vampire(const char* title, int hitPoints, int damage);
         virtual ~Vampire();

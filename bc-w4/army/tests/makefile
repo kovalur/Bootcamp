@@ -1,7 +1,7 @@
 all: tests.out
 
-tests.out: main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o test_vampireAndWizardFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o SpellCaster.o Wizard.o Healer.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o MagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
-	g++ -o tests.out main.o test_soldierAndRogueFight.o test_vampireAndWizardFight.o test_wizardAndBerserkerFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o SpellCaster.o Wizard.o Healer.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o MagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
+tests.out: main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o test_vampireAndWizardFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o test_priestAndVampireFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o SpellCaster.o Wizard.o Healer.o Priest.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o PriestAbility.o MagicAbility.o PriestMagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
+	g++ -o tests.out main.o test_soldierAndRogueFight.o test_vampireAndWizardFight.o test_wizardAndBerserkerFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o test_priestAndVampireFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o SpellCaster.o Wizard.o Healer.o Priest.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o PriestAbility.o MagicAbility.o PriestMagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
 
 main.o:
 	g++ -c main.cpp
@@ -20,6 +20,9 @@ test_wizardAndWerewolfFight.o:
 	
 test_wizardAndHealerFight.o:
 	g++ -c test_wizardAndHealerFight.cpp
+
+test_priestAndVampireFight.o:
+	g++ -c test_priestAndVampireFight.cpp
 
 Unit.o:
 	g++ -c ../unit/Unit.cpp
@@ -48,6 +51,9 @@ Wizard.o:
 Healer.o:
 	g++ -c ../unit/mage/Healer.cpp
 
+Priest.o:
+	g++ -c ../unit/mage/Priest.cpp
+
 State.o:
 	g++ -c ../state/State.cpp
 
@@ -66,8 +72,14 @@ RogueAbility.o:
 VampireAbility.o:
 	g++ -c ../ability/VampireAbility.cpp
 
+PriestAbility.o:
+	g++ -c ../ability/PriestAbility.cpp
+
 MagicAbility.o:
 	g++ -c ../ability/MagicAbility.cpp
+
+PriestMagicAbility.o:
+	g++ -c ../ability/PriestMagicAbility.cpp
 
 Spell.o:
 	g++ -c ../spell/Spell.cpp

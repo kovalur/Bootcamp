@@ -3,7 +3,6 @@
 SpellCaster::SpellCaster(const char* title, int hitPoints, int damage, int mana, TypeOfMage mageType)
     : Unit(title, hitPoints, damage),
         stateMagic(new StateMagic(mana)), mageType(mageType) {
-            this->ability = new DefaultAbility(this);
             std::cout << "SpellCaster object initialized." << std::endl;
 }
 

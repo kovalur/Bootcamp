@@ -18,7 +18,7 @@ class MagicAbility {
         const char* getSpellName() const;
         
         void changeSpell(Spell* newSpell);
-        void cast(Unit* target);
+        virtual void cast(Unit* target);
         virtual void counterAttack(Unit* enemy);
 };
 
