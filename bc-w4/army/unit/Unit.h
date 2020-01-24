@@ -25,7 +25,7 @@ class Unit {
         int getHitPointsLimit() const;
         int getDamage() const;
         
-        void addHitPoints(int hp);
+        virtual void addHitPoints(int hp);
         void takeDamage(int dmg);
         virtual void takeMagicDamage(int dmg);
         
