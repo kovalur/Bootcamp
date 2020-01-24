@@ -7,8 +7,8 @@ SpellCaster::SpellCaster(const char* title, int hitPoints, int damage, int mana,
 }
 
 SpellCaster::~SpellCaster() {
-    delete(this->magicAbility);
-    delete(this->stateMagic);
+    delete this->magicAbility;
+    delete this->stateMagic;
     std::cout << "SpellCaster object destroyed." << std::endl;
 }
 

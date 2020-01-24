@@ -45,7 +45,7 @@ TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Dem
         REQUIRE( demons[4]->getHitPoints() == 4 );
         
         for ( int i = 0; i < numOfDemons; i++ ) {
-            delete(demons[i]);
+            delete demons[i];
         }
         
         extraDemon->attack(&werewolf);
@@ -53,7 +53,7 @@ TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Dem
         REQUIRE( werewolf.getHitPoints() == 10 );
         REQUIRE( extraDemon->getHitPoints() == 4 );
         
-        delete(extraDemon);
+        delete extraDemon;
     }
     SECTION( "warlock attacks werewolf and can call Demons" ) {
         warlock.callDemons(numOfDemons, demons);
@@ -69,7 +69,7 @@ TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Dem
         REQUIRE( demons[3]->getHitPoints() == 4 );
         
         for ( int i = 0; i < numOfDemons; i++ ) {
-            delete(demons[i]);
+            delete demons[i];
         }
     }
     SECTION( "werewolf attacks warlock, and warlock then counterattacks with magic and call just one Demon" ) {
@@ -86,7 +86,7 @@ TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Dem
         REQUIRE( werewolf.getHitPoints() == 33 );
         REQUIRE( extraDemon->getHitPoints() == 4 );
         
-        delete(extraDemon);
+        delete extraDemon;
     }
     SECTION( "werewolf attacks warlock, and warlock can call just one Demon" ) {
         warlock.changeSpell("HealFriend");
@@ -106,7 +106,7 @@ TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Dem
         REQUIRE( werewolf.getHitPoints() == 43 );
         REQUIRE( extraDemon->getHitPoints() == 4 );
         
-        delete(extraDemon);
+        delete extraDemon;
     }
     SECTION( "warlock cannot heal demons" ) {
         extraDemon = warlock.callDemons();
@@ -130,8 +130,8 @@ TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Dem
         } catch ( UnitHealNotAllowedException ) {}
         
         for ( int i = 0; i < numOfDemons; i++ ) {
-            delete(demons[i]);
+            delete demons[i];
         }
-        delete(extraDemon);
+        delete extraDemon;
     }
 }

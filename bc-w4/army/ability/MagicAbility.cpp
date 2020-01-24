@@ -5,7 +5,7 @@ MagicAbility::MagicAbility(SpellCaster* owner, Spell* spell) : owner(owner), spe
 }
 
 MagicAbility::~MagicAbility() {
-    delete(this->spell);
+    delete this->spell;
     std::cout << "MagicAbility object destroyed." << std::endl;
 }
 
@@ -18,7 +18,7 @@ const char* MagicAbility::getSpellName() const {
 }
 
 void MagicAbility::changeSpell(Spell* newSpell) {
-    delete(this->spell);
+    delete this->spell;
     this->spell = newSpell;
 }
 

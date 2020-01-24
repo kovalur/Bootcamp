@@ -92,10 +92,10 @@ int main() {
     std::cout << "**" << std::endl;
     std::cout << "**" << std::endl;
     
-    // delete(soldier);
-    // delete(rogue);
-    delete(wizard);
-    delete(megaWizard);
+    // delete soldier;
+    // delete rogue;
+    delete wizard;
+    delete megaWizard;
     
     return 0;
 }

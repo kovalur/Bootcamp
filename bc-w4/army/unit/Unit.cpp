@@ -6,8 +6,8 @@ Unit::Unit(const char* title, int hitPoints, int damage)
 }
 
 Unit::~Unit() {
-    delete(this->state);
-    delete(this->ability);
+    delete this->state;
+    delete this->ability;
     std::cout << "Unit object destroyed." << std::endl;
 }
 
