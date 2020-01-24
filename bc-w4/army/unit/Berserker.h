@@ -1,3 +1,4 @@
+#pragma once
 #ifndef BERSERKER_H
 #define BERSERKER_H
 

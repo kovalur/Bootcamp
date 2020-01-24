@@ -1,3 +1,4 @@
+#pragma once
 #ifndef ROGUE_H
 #define ROGUE_H
 

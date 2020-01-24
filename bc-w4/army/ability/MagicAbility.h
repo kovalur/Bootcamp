@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MAGIC_ABILITY_H
 #define MAGIC_ABILITY_H
 

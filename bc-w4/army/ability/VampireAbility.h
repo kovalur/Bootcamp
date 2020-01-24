@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VAMPIRE_ABILITY_H
 #define VAMPIRE_ABILITY_H
 

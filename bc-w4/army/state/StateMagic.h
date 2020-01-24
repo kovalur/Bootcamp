@@ -1,3 +1,4 @@
+#pragma once
 #ifndef STATE_MAGIC_H
 #define STATE_MAGIC_H
 

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef WEREWOLF_H
 #define WEREWOLF_H
 

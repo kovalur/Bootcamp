@@ -1,3 +1,4 @@
+#pragma once
 #ifndef DEFAULT_ABILITY_H
 #define DEFAULT_ABILITY_H
 

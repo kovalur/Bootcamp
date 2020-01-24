@@ -1,3 +1,4 @@
+#pragma once
 #ifndef WARLOCK_H
 #define WARLOCK_H
 

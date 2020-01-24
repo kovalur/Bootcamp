@@ -1,3 +1,4 @@
+#pragma once
 #ifndef ROGUE_ABILITY_H
 #define ROGUE_ABILITY_H
 

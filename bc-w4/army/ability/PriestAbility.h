@@ -1,3 +1,4 @@
+#pragma once
 #ifndef PRIEST_ABILITY_H
 #define PRIEST_ABILITY_H
 

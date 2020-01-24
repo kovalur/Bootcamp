@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SURGE_OF_LIGHTNING_H
 #define SURGE_OF_LIGHTNING_H
 

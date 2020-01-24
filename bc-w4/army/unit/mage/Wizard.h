@@ -1,3 +1,4 @@
+#pragma once
 #ifndef WIZARD_H
 #define WIZARD_H
 

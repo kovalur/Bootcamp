@@ -1,3 +1,4 @@
+#pragma once
 #ifndef HEAL_FRIEND_H
 #define HEAL_FRIEND_H
 

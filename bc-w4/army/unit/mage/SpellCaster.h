@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SPELL_CASTER_H
 #define SPELL_CASTER_H
 

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef HEALER_H
 #define HEALER_H
 
