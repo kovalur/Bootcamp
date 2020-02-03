@@ -12,6 +12,7 @@ task.in
 task.out
 .vscode
 *.class
+results.txt
 
 # Executables
 *.swf
