@@ -3,18 +3,21 @@
 #define UNIT_H
 
 #include <iostream>
-#include <typeinfo>
+#include <set>
 
 #include "../state/State.h"
 #include "../ability/Ability.h"
 #include "../unit/Undead.h"
+#include "../state/Observable.h"
+#include "../state/Observer.h"
 
 class Ability;
 
-class Unit {
+class Unit : public Observable {
     protected:
         State* state;
         Ability* ability;
+        std::set<Observer*> observers;
     public:
         Unit(const char* title, int hitPoints, int damage);
         virtual ~Unit();
@@ -32,6 +35,9 @@ class Unit {
         
         virtual void counterAttack(Unit* enemy);
         virtual void attack(Unit* enemy);
+        
+        virtual void attach(Observer* observer) override;
+        virtual void notify() override;
 };
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit);

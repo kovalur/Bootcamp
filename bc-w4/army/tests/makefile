@@ -1,106 +1,118 @@
 all: tests.out
 
-tests.out: main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o test_vampireAndWizardFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o test_priestAndVampireFight.o test_warlockAndWerewolfFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o Demon.o SpellCaster.o Wizard.o Healer.o Priest.o Warlock.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o PriestAbility.o MagicAbility.o PriestMagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
-	g++ -o tests.out main.o test_soldierAndRogueFight.o test_vampireAndWizardFight.o test_wizardAndBerserkerFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o test_priestAndVampireFight.o test_warlockAndWerewolfFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o Demon.o SpellCaster.o Wizard.o Healer.o Priest.o Warlock.o State.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o PriestAbility.o MagicAbility.o PriestMagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
+tests.out: main.o test_soldierAndRogueFight.o test_wizardAndBerserkerFight.o test_vampireAndWizardFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o test_priestAndVampireFight.o test_warlockAndWerewolfFight.o test_necromancerAndSoldierFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o Demon.o SpellCaster.o Wizard.o Healer.o Priest.o Warlock.o Necromancer.o State.o Observer.o Observable.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o PriestAbility.o MagicAbility.o PriestMagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
+	g++ -std=c++11 -o tests.out main.o test_soldierAndRogueFight.o test_vampireAndWizardFight.o test_wizardAndBerserkerFight.o test_wizardAndWerewolfFight.o test_wizardAndHealerFight.o test_priestAndVampireFight.o test_warlockAndWerewolfFight.o test_necromancerAndSoldierFight.o Unit.o Soldier.o Rogue.o Berserker.o Vampire.o Werewolf.o Demon.o SpellCaster.o Wizard.o Healer.o Priest.o Warlock.o Necromancer.o State.o Observer.o Observable.o StateMagic.o Ability.o DefaultAbility.o RogueAbility.o VampireAbility.o PriestAbility.o MagicAbility.o PriestMagicAbility.o Spell.o HealFriend.o SurgeOfLightning.o
 
 main.o:
-	g++ -c main.cpp
+	g++ -std=c++11 -c main.cpp
 
 test_soldierAndRogueFight.o:
-	g++ -c test_soldierAndRogueFight.cpp
+	g++ -std=c++11 -c test_soldierAndRogueFight.cpp
 
 test_wizardAndBerserkerFight.o:
-	g++ -c test_wizardAndBerserkerFight.cpp
+	g++ -std=c++11 -c test_wizardAndBerserkerFight.cpp
 
 test_VampireAndWizardFight.o:
-	g++ -c test_vampireAndWizardFight.cpp
+	g++ -std=c++11 -c test_vampireAndWizardFight.cpp
 
 test_wizardAndWerewolfFight.o:
-	g++ -c test_wizardAndWerewolfFight.cpp
+	g++ -std=c++11 -c test_wizardAndWerewolfFight.cpp
 	
 test_wizardAndHealerFight.o:
-	g++ -c test_wizardAndHealerFight.cpp
+	g++ -std=c++11 -c test_wizardAndHealerFight.cpp
 
 test_priestAndVampireFight.o:
-	g++ -c test_priestAndVampireFight.cpp
+	g++ -std=c++11 -c test_priestAndVampireFight.cpp
 
 test_warlockAndWerewolfFight.o:
-	g++ -c test_warlockAndWerewolfFight.cpp
+	g++ -std=c++11 -c test_warlockAndWerewolfFight.cpp
+
+test_necromancerAndSoldierFight.o:
+	g++ -std=c++11 -c test_necromancerAndSoldierFight.cpp
 
 Unit.o:
-	g++ -c ../unit/Unit.cpp
+	g++ -std=c++11 -c ../unit/Unit.cpp
 
 Soldier.o:
-	g++ -c ../unit/Soldier.cpp
+	g++ -std=c++11 -c ../unit/Soldier.cpp
 
 Rogue.o:
-	g++ -c ../unit/Rogue.cpp
+	g++ -std=c++11 -c ../unit/Rogue.cpp
 
 Berserker.o:
-	g++ -c ../unit/Berserker.cpp
+	g++ -std=c++11 -c ../unit/Berserker.cpp
 	
 Vampire.o:
-	g++ -c ../unit/Vampire.cpp
+	g++ -std=c++11 -c ../unit/Vampire.cpp
 
 Werewolf.o:
-	g++ -c ../unit/Werewolf.cpp
+	g++ -std=c++11 -c ../unit/Werewolf.cpp
 
 Demon.o:
-	g++ -c ../unit/Demon.cpp
+	g++ -std=c++11 -c ../unit/Demon.cpp
 
 SpellCaster.o:
-	g++ -c ../unit/mage/SpellCaster.cpp
+	g++ -std=c++11 -c ../unit/mage/SpellCaster.cpp
 
 Wizard.o:
-	g++ -c ../unit/mage/Wizard.cpp
+	g++ -std=c++11 -c ../unit/mage/Wizard.cpp
 
 Healer.o:
-	g++ -c ../unit/mage/Healer.cpp
+	g++ -std=c++11 -c ../unit/mage/Healer.cpp
 
 Priest.o:
-	g++ -c ../unit/mage/Priest.cpp
+	g++ -std=c++11 -c ../unit/mage/Priest.cpp
 	
 Warlock.o:
-	g++ -c ../unit/mage/Warlock.cpp
+	g++ -std=c++11 -c ../unit/mage/Warlock.cpp
+	
+Necromancer.o:
+	g++ -std=c++11 -c ../unit/mage/Necromancer.cpp
 
 State.o:
-	g++ -c ../state/State.cpp
+	g++ -std=c++11 -c ../state/State.cpp
 
 StateMagic.o:
-	g++ -c ../state/StateMagic.cpp
+	g++ -std=c++11 -c ../state/StateMagic.cpp
+
+Observer.o:
+	g++ -std=c++11 -c ../state/Observer.cpp
+
+Observable.o:
+	g++ -std=c++11 -c ../state/Observable.cpp
 
 Ability.o:
-	g++ -c ../ability/Ability.cpp
+	g++ -std=c++11 -c ../ability/Ability.cpp
 
 DefaultAbility.o:
-	g++ -c ../ability/DefaultAbility.cpp
+	g++ -std=c++11 -c ../ability/DefaultAbility.cpp
 
 RogueAbility.o:
-	g++ -c ../ability/RogueAbility.cpp
+	g++ -std=c++11 -c ../ability/RogueAbility.cpp
 	
 VampireAbility.o:
-	g++ -c ../ability/VampireAbility.cpp
+	g++ -std=c++11 -c ../ability/VampireAbility.cpp
 
 PriestAbility.o:
-	g++ -c ../ability/PriestAbility.cpp
+	g++ -std=c++11 -c ../ability/PriestAbility.cpp
 
 MagicAbility.o:
-	g++ -c ../ability/MagicAbility.cpp
+	g++ -std=c++11 -c ../ability/MagicAbility.cpp
 
 PriestMagicAbility.o:
-	g++ -c ../ability/PriestMagicAbility.cpp
+	g++ -std=c++11 -c ../ability/PriestMagicAbility.cpp
 
 Spell.o:
-	g++ -c ../spell/Spell.cpp
+	g++ -std=c++11 -c ../spell/Spell.cpp
 
 HealFriend.o:
-	g++ -c ../spell/HealFriend.cpp
+	g++ -std=c++11 -c ../spell/HealFriend.cpp
 
 SurgeOfLightning.o:
-	g++ -c ../spell/SurgeOfLightning.cpp
+	g++ -std=c++11 -c ../spell/SurgeOfLightning.cpp
 
 clean:
 	rm -f *.o
 
 run_tests:
-	make clean && make && make clean && ./tests.out
+	 make clean && make && ./tests.out > results.txt && make clean

@@ -1,7 +1,7 @@
 #include "Unit.h"
 
 Unit::Unit(const char* title, int hitPoints, int damage)
-    : state(new State(title, hitPoints, damage)) {
+    : state(new State(title, hitPoints, damage)), Observable(this) {
         std::cout << "Unit object initialized." << std::endl;
 }
 
@@ -37,10 +37,18 @@ void Unit::addHitPoints(int hp) {
 
 void Unit::takeDamage(int dmg) {
     this->state->takeDamage(dmg);
+    
+    if ( this->state->getHitPoints() == 0 ) {
+        this->notify();
+    }
 }
 
 void Unit::takeMagicDamage(int dmg) {
     this->state->takeMagicDamage(dmg);
+    
+    if ( this->state->getHitPoints() == 0 ) {
+        this->notify();
+    }
 }
 
 void Unit::attack(Unit* enemy) {
@@ -49,6 +57,19 @@ void Unit::attack(Unit* enemy) {
 
 void Unit::counterAttack(Unit* enemy) {
     this->ability->counterAttack(enemy);
+}
+
+void Unit::attach(Observer* observer) {  
+    this->observers.insert(observer);
+}
+
+void Unit::notify() {
+    std::set<Observer*>::iterator it;
+    
+    for ( it = this->observers.begin(); it != this->observers.end(); it++ ) {
+        (*it)->update(this);
+    }
+    this->observers.clear();
 }
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit) {

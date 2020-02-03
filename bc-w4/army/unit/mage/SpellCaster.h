@@ -38,7 +38,7 @@ class SpellCaster : public Unit {
         void spendMana(int cost);
         
         void changeSpell(const char* spellName);
-        void cast(Unit* target);
+        virtual void cast(Unit* target);
 };
 
 std::ostream& operator<<(std::ostream& out, const SpellCaster& spellCaster);
