@@ -36,8 +36,8 @@ class Unit : public Observable {
         virtual void counterAttack(Unit* enemy);
         virtual void attack(Unit* enemy);
         
-        virtual void attach(Observer* observer) override;
-        virtual void notify() override;
+        void attach(Observer* observer) override;
+        void notify() override;
 };
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit);

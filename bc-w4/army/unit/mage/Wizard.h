@@ -9,7 +9,7 @@ class Wizard : public SpellCaster {
         Wizard(const char* title, int hitPoints, int damage, int mana);
         virtual ~Wizard();
         
-        virtual void counterAttack(Unit* enemy) override;
+        void counterAttack(Unit* enemy) override;
 };
 
 #endif //WIZARD_H

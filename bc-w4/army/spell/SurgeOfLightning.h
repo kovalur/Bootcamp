@@ -12,7 +12,7 @@ class SurgeOfLightning : public Spell {
         SurgeOfLightning(int actionPoints, int cost, SpellCaster* owner);
         virtual ~SurgeOfLightning();
         
-        virtual void action(Unit* target) override;
+        void action(Unit* target) override;
 };
 
 #endif //SURGEOFLIGHTNING_H

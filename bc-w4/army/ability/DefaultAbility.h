@@ -9,7 +9,7 @@ class DefaultAbility : public Ability {
         DefaultAbility(Unit* owner);
         virtual ~DefaultAbility();
         
-        virtual void attack(Unit* enemy) override;
+        void attack(Unit* enemy) override;
 };
 
 #endif //DEFAULT_ABILITY_H

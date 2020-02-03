@@ -9,7 +9,7 @@ class RogueAbility : public Ability {
         RogueAbility(Unit* owner);
         virtual ~RogueAbility();
         
-        virtual void attack(Unit* enemy) override;
+        void attack(Unit* enemy) override;
 };
 
 #endif //ROGUE_ABILITY_H

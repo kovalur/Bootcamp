@@ -11,8 +11,8 @@ class VampireAbility : public Ability {
         VampireAbility(Unit* owner);
         virtual ~VampireAbility();
         
-        virtual void attack(Unit* enemy) override;
-        virtual void counterAttack(Unit* enemy) override;
+        void attack(Unit* enemy) override;
+        void counterAttack(Unit* enemy) override;
 };
 
 #endif //VAMPIRE_ABILITY_H

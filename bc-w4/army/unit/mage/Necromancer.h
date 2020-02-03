@@ -14,12 +14,12 @@ class Necromancer : public SpellCaster, public Observer {
         Necromancer(const char* title, int hitPoints, int damage, int mana);
         virtual ~Necromancer();
         
-        virtual void update(Observable* observable) override;
+        void update(Observable* observable) override;
         
-        virtual void cast(Unit* target) override;
+        void cast(Unit* target) override;
         
-        virtual void attack(Unit* enemy) override;
-        virtual void counterAttack(Unit* enemy) override;
+        void attack(Unit* enemy) override;
+        void counterAttack(Unit* enemy) override;
 };
 
 #endif //NECROMANCER_H

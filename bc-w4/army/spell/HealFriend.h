@@ -12,7 +12,7 @@ class HealFriend : public Spell {
         HealFriend(int actionPoints, int cost, SpellCaster* owner);
         virtual ~HealFriend();
         
-        virtual void action(Unit* target) override;
+        void action(Unit* target) override;
 };
 
 #endif //HEAL_FRIEND_H

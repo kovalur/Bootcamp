@@ -9,8 +9,8 @@ class PriestAbility : public Ability {
         PriestAbility(Unit* owner);
         virtual ~PriestAbility();
         
-        virtual void attack(Unit* enemy) override;
-        virtual void counterAttack(Unit* enemy) override;
+        void attack(Unit* enemy) override;
+        void counterAttack(Unit* enemy) override;
 };
 
 #endif //PRIEST_ABILITY_H
