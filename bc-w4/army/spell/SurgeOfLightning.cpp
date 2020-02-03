@@ -16,5 +16,7 @@ void SurgeOfLightning::action(Unit* target) {
         actionPoints /= 2;
     }
     target->takeMagicDamage(actionPoints);
-    target->counterAttack(this->owner);
+    if ( target->getHitPoints() > 0 ) {
+        target->counterAttack(this->owner);
+    }
 }

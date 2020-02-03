@@ -12,7 +12,9 @@ void Ability::attack(Unit* enemy) {
     this->owner->ensureIsAlive();
     
     enemy->takeDamage(this->owner->getDamage());
-    enemy->counterAttack(this->owner);
+    if ( enemy->getHitPoints() > 0 ) {
+        enemy->counterAttack(this->owner);
+    }
 }
 
 void Ability::counterAttack(Unit* enemy) {
