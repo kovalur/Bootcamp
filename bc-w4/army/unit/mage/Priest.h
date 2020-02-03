@@ -11,7 +11,7 @@ class Priest : public SpellCaster {
         Priest(const char* title, int hitPoints, int damage, int mana);
         virtual ~Priest();
         
-        virtual void counterAttack(Unit* enemy);
+        virtual void counterAttack(Unit* enemy) override;
 };
 
 #endif //PRIEST_H

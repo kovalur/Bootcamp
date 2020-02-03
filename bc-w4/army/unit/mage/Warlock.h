@@ -14,7 +14,8 @@ class Warlock : public SpellCaster {
         
         Demon* callDemons();
         void callDemons(int qt, Demon* demons[]);
-        virtual void counterAttack(Unit* enemy);
+        
+        virtual void counterAttack(Unit* enemy) override;
 };
 
 #endif //WARLOCK_H

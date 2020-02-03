@@ -9,8 +9,8 @@ class PriestMagicAbility : public MagicAbility {
         PriestMagicAbility(SpellCaster* owner, Spell* spell);
         virtual ~PriestMagicAbility();
         
-        virtual void cast(Unit* target);
-        virtual void counterAttack(Unit* enemy);
+        virtual void cast(Unit* target) override;
+        virtual void counterAttack(Unit* enemy) override;
 };
 
 #endif //PRIEST_MAGIC_ABILITY_H

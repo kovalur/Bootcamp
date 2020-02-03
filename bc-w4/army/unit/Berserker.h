@@ -11,7 +11,7 @@ class Berserker : public Unit {
         Berserker(const char* title, int hitPoints, int damage);
         virtual ~Berserker();
         
-        virtual void takeMagicDamage(int dmg);
+        virtual void takeMagicDamage(int dmg) override;
 };
 
 #endif //BERSERKER_H

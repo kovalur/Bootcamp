@@ -12,7 +12,7 @@ class Demon : public Soldier {
         Demon(const char* title, int hitPoints, int damage);
         virtual ~Demon();
         
-        virtual void addHitPoints(int hp);
+        virtual void addHitPoints(int hp) override;
 };
 
 #endif //DEMON_H

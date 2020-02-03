@@ -16,7 +16,7 @@ class Werewolf : public Unit {
         Werewolf(const char* title, int hitPoints, int damage);
         virtual ~Werewolf();
         
-        virtual void takeMagicDamage(int dmg);
+        virtual void takeMagicDamage(int dmg) override;
         void transform();
 };
 

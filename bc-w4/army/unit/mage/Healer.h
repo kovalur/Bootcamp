@@ -9,7 +9,7 @@ class Healer : public SpellCaster {
         Healer(const char* title, int hitPoints, int damage, int mana);
         virtual ~Healer();
         
-        virtual void counterAttack(Unit* enemy);
+        virtual void counterAttack(Unit* enemy) override;
 };
 
 #endif //HEALER_H
