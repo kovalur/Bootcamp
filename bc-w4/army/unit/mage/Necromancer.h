@@ -5,11 +5,12 @@
 #include <string>
 
 #include "SpellCaster.h"
+#include "../Undead.h"
 #include "../../state/Observer.h"
 
 class Unit;
 
-class Necromancer : public SpellCaster, public Observer {
+class Necromancer : public SpellCaster, public Observer, public Undead {
     public:
         Necromancer(const char* title, int hitPoints, int damage, int mana);
         virtual ~Necromancer();

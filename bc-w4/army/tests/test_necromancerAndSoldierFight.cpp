@@ -1,12 +1,14 @@
 #include "../unit/mage/Necromancer.h"
+#include "../unit/mage/Priest.h"
 #include "../unit/Soldier.h"
 #include "catch.hpp"
 #include <cstring>
 
-TEST_CASE( "necromancer and soldier", "[necromancer][soldier]" ) {
+TEST_CASE( "necromancer and soldier", "[necromancer][soldier][priest]" ) {
     Necromancer necromancer = Necromancer("Simple Necromancer", 90, 12, 100);
     Necromancer necromancer2 = Necromancer("Simple Necromancer2", 90, 12, 100);
     Soldier soldier = Soldier("Very Simple Soldier", 51, 5);
+    Priest priest = Priest("Simple Priest", 80, 8, 120);
     
     REQUIRE( necromancer.getHitPoints() == 90 );
     REQUIRE( necromancer.getHitPointsLimit() == 90 );
@@ -16,6 +18,11 @@ TEST_CASE( "necromancer and soldier", "[necromancer][soldier]" ) {
     REQUIRE( soldier.getHitPoints() == 51 );
     REQUIRE( soldier.getHitPointsLimit() == 51 );
     REQUIRE( soldier.getDamage() == 5 );
+    REQUIRE( priest.getHitPoints() == 80 );
+    REQUIRE( priest.getHitPointsLimit() == 80 );
+    REQUIRE( priest.getDamage() == 8 );
+    REQUIRE( priest.getMana() == 120 );
+    REQUIRE( std::strcmp(priest.getActiveSpellName(), "HealFriend") == 0 );
     
     SECTION( "necromancer attacks soldier with magic to the death" ) {
         necromancer.cast(&soldier);
@@ -101,5 +108,41 @@ TEST_CASE( "necromancer and soldier", "[necromancer][soldier]" ) {
         REQUIRE( necromancer.getMana() == 52 );
         REQUIRE( necromancer2.getHitPoints() == 60 );
         REQUIRE( necromancer2.getMana() == 25 );
+    }
+    SECTION( "priest attacks necromancer with magic" ) {
+        priest.changeSpell("SurgeOfLightning");
+        
+        REQUIRE( std::strcmp(priest.getActiveSpellName(), "SurgeOfLightning") == 0 );
+        
+        priest.cast(&necromancer);
+        
+        REQUIRE( necromancer.getHitPoints() == 66 );
+        REQUIRE( priest.getHitPoints() == 68 );
+        REQUIRE( priest.getMana() == 95 );
+    }
+    SECTION( "priest attacks necromancer" ) {
+        priest.attack(&necromancer);
+        
+        REQUIRE( necromancer.getHitPoints() == 74 );
+        REQUIRE( priest.getHitPoints() == 68 );
+        REQUIRE( priest.getMana() == 120 );
+    }
+    SECTION( "necromancer attacks priest, and priest then counterattacks with magic" ) {
+        priest.changeSpell("SurgeOfLightning");
+        
+        REQUIRE( std::strcmp(priest.getActiveSpellName(), "SurgeOfLightning") == 0 );
+        
+        necromancer.attack(&priest);
+        
+        REQUIRE( priest.getHitPoints() == 68 );
+        REQUIRE( priest.getMana() == 108 );
+        REQUIRE( necromancer.getHitPoints() == 78 );
+    }
+    SECTION( "necromancer attacks priest" ) {
+        necromancer.attack(&priest);
+        
+        REQUIRE( priest.getHitPoints() == 68 );
+        REQUIRE( priest.getMana() == 120 );
+        REQUIRE( necromancer.getHitPoints() == 82 );
     }
 }

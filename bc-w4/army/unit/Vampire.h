@@ -3,6 +3,7 @@
 #define VAMPIRE_H
 
 #include "Unit.h"
+#include "Undead.h"
 #include "../ability/VampireAbility.h"
 
 class Vampire : public Unit, public Undead {

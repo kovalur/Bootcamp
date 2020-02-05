@@ -3,6 +3,7 @@
 #define PRIEST_ABILITY_H
 
 #include "Ability.h"
+#include "../unit/Undead.h"
 
 class PriestAbility : public Ability {
     public:

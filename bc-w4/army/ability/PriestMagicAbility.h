@@ -3,6 +3,7 @@
 #define PRIEST_MAGIC_ABILITY_H
 
 #include "MagicAbility.h"
+#include "../unit/Undead.h"
 
 class PriestMagicAbility : public MagicAbility {
     public:

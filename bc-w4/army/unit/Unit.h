@@ -7,7 +7,6 @@
 
 #include "../state/State.h"
 #include "../ability/Ability.h"
-#include "../unit/Undead.h"
 #include "../state/Observable.h"
 #include "../state/Observer.h"
 
