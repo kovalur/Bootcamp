@@ -2,12 +2,15 @@
 #include "../unit/Werewolf.h"
 #include "../unit/Demon.h"
 #include "../exceptions.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 #include <cstring>
 
+
 TEST_CASE( "warlock and werewolf can attack each other, and warlock can call Demons", "[warlock][werewolf][demon]" ) {
-    Warlock warlock = Warlock("Simple Warlock", 90, 11, 80);
-    Werewolf werewolf = Werewolf("Simple Werewolf", 50, 10);
+    Warlock warlock = Warlock("Simple Warlock", int(Hp::Warlock), int(Dmg::Warlock), int(Mana::Warlock));
+    Werewolf werewolf = Werewolf("Simple Werewolf", int(Hp::Werewolf), int(Dmg::Werewolf));
     int numOfDemons = 5;
     Demon* demons[numOfDemons];
     Demon* extraDemon;

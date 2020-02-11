@@ -1,10 +1,13 @@
 #include "../unit/Berserker.h"
 #include "../unit/mage/Wizard.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 
+
 TEST_CASE( "wizard and berserker can attack each other", "[wizard][berserker]" ) {
-    Wizard wizard = Wizard("Simple Wizard", 60, 10, 90);
-    Berserker berserker = Berserker("Simple Berserker", 120, 20);
+    Wizard wizard = Wizard("Simple Wizard", int(Hp::Wizard), int(Dmg::Wizard), int(Mana::Wizard));
+    Berserker berserker = Berserker("Simple Berserker", int(Hp::Berserker), int(Dmg::Berserker));
     
     REQUIRE( berserker.getHitPoints() == 120 );
     REQUIRE( berserker.getHitPointsLimit() == 120 );

@@ -1,11 +1,14 @@
 #include "../unit/mage/Wizard.h"
 #include "../unit/mage/Healer.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 #include <cstring>
 
+
 TEST_CASE( "wizard and healer can attack/heal each other", "[wizard][healer]" ) {
-    Wizard wizard = Wizard("Simple Wizard", 60, 10, 90);
-    Healer healer = Healer("Simple Healer", 40, 8, 100);
+    Wizard wizard = Wizard("Simple Wizard", int(Hp::Wizard), int(Dmg::Wizard), int(Mana::Wizard));
+    Healer healer = Healer("Simple Healer", int(Hp::Healer), int(Dmg::Healer), int(Mana::Healer));
     
     REQUIRE( wizard.getHitPoints() == 60 );
     REQUIRE( wizard.getHitPointsLimit() == 60 );

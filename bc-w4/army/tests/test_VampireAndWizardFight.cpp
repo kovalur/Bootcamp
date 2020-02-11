@@ -1,10 +1,13 @@
 #include "../unit/Vampire.h"
 #include "../unit/mage/Wizard.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 
+
 TEST_CASE( "vampire and wizard can attack each other", "[vampire][wizard]" ) {
-    Vampire vampire = Vampire("Simple Vampire", 70, 20);
-    Wizard wizard = Wizard("Simple Wizard", 60, 10, 90);
+    Vampire vampire = Vampire("Simple Vampire", int(Hp::Vampire), int(Dmg::Vampire));
+    Wizard wizard = Wizard("Simple Wizard", int(Hp::Wizard), int(Dmg::Wizard), int(Mana::Wizard));
     
     REQUIRE( vampire.getHitPoints() == 70 );
     REQUIRE( vampire.getHitPointsLimit() == 70 );

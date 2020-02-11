@@ -1,10 +1,13 @@
 #include "../unit/Soldier.h"
 #include "../unit/Rogue.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 
+
 TEST_CASE( "soldier and rogue can attack each other", "[soldier][rogue]" ) {
-    Soldier soldier = Soldier("Simple Slodier", 100, 10);
-    Rogue rogue = Rogue("Simple Rogue", 80, 15);
+    Soldier soldier = Soldier("Simple Soldier", int(Hp::Soldier), int(Dmg::Soldier));
+    Rogue rogue = Rogue("Simple Rogue", int(Hp::Rogue), int(Dmg::Rogue));
     
     REQUIRE( soldier.getHitPoints() == 100 );
     REQUIRE( soldier.getHitPointsLimit() == 100 );

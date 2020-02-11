@@ -1,14 +1,17 @@
 #include "../unit/mage/Necromancer.h"
 #include "../unit/mage/Priest.h"
 #include "../unit/Soldier.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 #include <cstring>
 
+
 TEST_CASE( "necromancer and soldier", "[necromancer][soldier][priest]" ) {
-    Necromancer necromancer = Necromancer("Simple Necromancer", 90, 12, 100);
-    Necromancer necromancer2 = Necromancer("Simple Necromancer2", 90, 12, 100);
-    Soldier soldier = Soldier("Very Simple Soldier", 51, 5);
-    Priest priest = Priest("Simple Priest", 80, 8, 120);
+    Necromancer necromancer = Necromancer("Simple Necromancer", int(Hp::Necromancer), int(Dmg::Necromancer), int(Mana::Necromancer));
+    Necromancer necromancer2 = Necromancer("Simple Necromancer2", int(Hp::Necromancer), int(Dmg::Necromancer), int(Mana::Necromancer));
+    Soldier soldier = Soldier("Light Soldier", int(Hp::LightSoldier), int(Dmg::LightSoldier));
+    Priest priest = Priest("Simple Priest", int(Hp::Priest), int(Dmg::Priest), int(Mana::Priest));
     
     REQUIRE( necromancer.getHitPoints() == 90 );
     REQUIRE( necromancer.getHitPointsLimit() == 90 );

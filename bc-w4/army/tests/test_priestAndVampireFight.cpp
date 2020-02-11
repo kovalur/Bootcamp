@@ -1,13 +1,16 @@
 #include "../unit/mage/Priest.h"
 #include "../unit/Vampire.h"
 #include "../unit/Soldier.h"
+#include "../properties.h"
+
 #include "catch.hpp"
 #include <cstring>
 
+
 TEST_CASE( "priest and vampire(or other non-undead unit) can attack each other", "[priest][vampire][soldier]" ) {
-    Priest priest = Priest("Simple Priest", 80, 8, 120);
-    Vampire vampire = Vampire("Simple Vampire", 70, 20);
-    Soldier soldier = Soldier("Simple Soldier", 100, 10);
+    Priest priest = Priest("Simple Priest", int(Hp::Priest), int(Dmg::Priest), int(Mana::Priest));
+    Vampire vampire = Vampire("Simple Vampire", int(Hp::Vampire), int(Dmg::Vampire));
+    Soldier soldier = Soldier("Simple Soldier", int(Hp::Soldier), int(Dmg::Soldier));
     
     REQUIRE( priest.getHitPoints() == 80 );
     REQUIRE( priest.getHitPointsLimit() == 80 );
