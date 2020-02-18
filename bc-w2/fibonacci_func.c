@@ -13,7 +13,9 @@
 //     return fibonacci(n-1) + fibonacci(n-2);
 // }
 
-// Better solution (in my opinion)
+// Better solution (in my opinion),
+// but does not meet valid "negafibonacci" sequence: −8, 5, −3, 2, −1, 1, 0.
+// In this implementation: −8, -5, −3, -2, −1, -1, 0.
 int fibonacci(int n) {
     if ( n == 0 ) {
         return 0;
