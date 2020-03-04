@@ -17,14 +17,15 @@
         
         public function __get($name) {
             if ( property_exists($this, $name) ) {
-                return $this->name;
+                return $this->$name;
             }
             throw new Exception("Attribute error: attribute $name not found");
         }
         
         public function __set($name, $value) {
             if ( property_exists($this, $name) ) {
-                $this->name = $this->validate($value);
+                $this->$name = $this->validate($value);
+                return;
             }
             throw new Exception("Attribute error: attribute $name not found");
         }
@@ -59,6 +60,9 @@
     $c = new Point(3, 7);
     $d = $a;
     $e = clone $a;
+    $a->x = 7;
+    echo $a->x . PHP_EOL;
+    $a->x = 2;
     
     echo "a: " . $a . PHP_EOL;
     echo "b: " . $b . PHP_EOL;
