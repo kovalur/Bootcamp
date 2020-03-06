@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) throws OutOfInkException, OutOfSpaceException {
-        Paper paper = new Paper(12);
-        Pen pen = new Pen(12);
+        Paper paper = new Paper(14);
+        Pen pen = new Pen(18);
         
         pen.write(paper, "Hello, world!");
         
@@ -11,10 +11,13 @@ public class Main {
         System.out.println("Pen ink capacity: " + pen.getInkCapacity());
         
         try {
-            pen.write(paper, "!");
+            pen.write(paper, "!!");
         } catch (OutOfInkException e) {
             System.out.println("Out of ink.");
         }
+        
+        System.out.println("Pen ink amount: " + pen.getInkAmount());
+        System.out.println("Paper symbols: " + paper.getSymbols());
         
         paper.show();
         

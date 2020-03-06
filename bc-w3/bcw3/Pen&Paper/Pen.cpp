@@ -19,13 +19,14 @@ void Pen::write(Paper& paper, const std::string& message) {
         throw OutOfInk();
     }
     
+    int beforePaperSymbols = paper.getSymbols();
     if ( message.length() > this->inkAmount ) {
         paper.addContent(message.substr(0, this->inkAmount));
-        this->inkAmount = 0;
+        this->inkAmount -= paper.getSymbols() - beforePaperSymbols;
         return;
     }
     paper.addContent(message);
-    this->inkAmount -= message.length();
+    this->inkAmount -= paper.getSymbols() - beforePaperSymbols;
 }
 
 void Pen::refill() {

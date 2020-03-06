@@ -22,15 +22,15 @@ public class Paper {
     }
     
     public void addContent(String message) throws OutOfSpaceException {
+        int msgLen = message.length();
         int spaceLeft = this.maxSymbols - this.symbols;
-        String textToAdd = message.substring(0, spaceLeft);
+        String textToAdd = message.substring(0, spaceLeft < msgLen ? spaceLeft : msgLen);
         
         if ( spaceLeft == 0 ) {
             throw new OutOfSpaceException();
         }
         this.content.append(textToAdd);
         this.symbols += textToAdd.length();
-        
     }
     
     public void show() {

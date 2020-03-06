@@ -24,13 +24,14 @@ public class Pen {
             throw new OutOfInkException();
         }
         
+        int beforePaperSymbols = paper.getSymbols();
         if ( message.length() > this.inkAmount ) {
             paper.addContent(message.substring(0, this.inkAmount));
-            this.inkAmount = 0;
+            this.inkAmount -= paper.getSymbols() - beforePaperSymbols;
             return;
         }
         paper.addContent(message);
-        this.inkAmount -= message.length();
+        this.inkAmount -= paper.getSymbols() - beforePaperSymbols;
     }
     
     public void refill() {
