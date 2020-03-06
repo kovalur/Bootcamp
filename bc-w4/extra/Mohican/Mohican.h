@@ -15,7 +15,7 @@ class Mohican {
         
         const std::string& getName() const;
         
-        static const Mohican& getLastOfMohicans();
+        static const Mohican& lastOfMohicans();
 };
 
 std::ostream& operator<<(std::ostream& out, const Mohican& mohican);

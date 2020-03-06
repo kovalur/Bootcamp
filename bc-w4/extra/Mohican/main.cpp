@@ -12,21 +12,21 @@ int main() {
     std::cout << "(2) => " << m2->getName() << std::endl;
     std::cout << "(3) => " << m3->getName() << std::endl;
     std::cout << "(4) => " << m4->getName() << std::endl;
-    std::cout << Mohican::getLastOfMohicans() << std::endl;
+    std::cout << Mohican::lastOfMohicans() << std::endl;
     
     delete(m1);
     delete(m4);
     delete(m3);
     
     std::cout << "##########################" << std::endl;
-    std::cout << Mohican::getLastOfMohicans() << std::endl;
+    std::cout << Mohican::lastOfMohicans() << std::endl;
     
     Mohican* m5 = new Mohican("Patrik");
     
     std::cout << "##########################" << std::endl;
     std::cout << "(2) => " << m2->getName() << std::endl;
     std::cout << "(5) => " << m5->getName() << std::endl;
-    std::cout << Mohican::getLastOfMohicans() << std::endl;
+    std::cout << Mohican::lastOfMohicans() << std::endl;
     
     delete(m2);
     delete(m5);

@@ -17,7 +17,7 @@ const std::string& Mohican::getName() const {
   return this->name;
 }
 
-const Mohican& Mohican::getLastOfMohicans() {
+const Mohican& Mohican::lastOfMohicans() {
     return *(mohicans.back());
 }
 
