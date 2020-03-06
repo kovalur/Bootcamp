@@ -10,8 +10,6 @@ int main() {
     std::cout << "(1) => " << id1->getId() << std::endl;
     std::cout << "(2) => " << id2->getId() << std::endl;
     
-    delete(id1);
-    
     Identifiable* id3 = new Identifiable();
     Identifiable* id4 = new Identifiable();
     
@@ -22,6 +20,11 @@ int main() {
     // std::random_device rd;
     // std::cout << "minimum: " << rd.min() << std::endl;
     // std::cout << "maximum: " << rd.max() << std::endl;
+    
+    delete(id1);
+    delete(id2);
+    delete(id3);
+    delete(id4);
     
     return 0;
 }

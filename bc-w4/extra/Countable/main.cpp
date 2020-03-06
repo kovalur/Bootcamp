@@ -11,12 +11,14 @@ int main() {
     
     std::cout << "##########################" << std::endl;
     std::cout << "Total count: " << Countable::getCount() << std::endl;
-
+    
     delete(c1);
     delete(c3);
     
     std::cout << "##########################" << std::endl;
     std::cout << "Total count: " << Countable::getCount() << std::endl;
-
+    
+    delete(c2);
+    
     return 0;
 }

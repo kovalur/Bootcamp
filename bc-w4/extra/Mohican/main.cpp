@@ -28,5 +28,8 @@ int main() {
     std::cout << "(5) => " << m5->getName() << std::endl;
     std::cout << Mohican::getLastOfMohicans() << std::endl;
     
+    delete(m2);
+    delete(m5);
+    
     return 0;
 }

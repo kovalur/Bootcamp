@@ -17,12 +17,16 @@ int main() {
         std::cout << *p2 << std::endl;
         // std::cout << "##########################" << std::endl;
         // std::cout << *p3 << std::endl;
+        
+        delete(p1);
+        delete(p2);
+        // delete(p3);
     } catch (Exception* e) {
         std::cout << e->text << std::endl;
     }
-
+    
     std::cout << Passport::currentPasswordSeries() << std::endl;
     std::cout << Passport::currentPasswordNumber() << std::endl;
-
+    
     return 0;
 }
