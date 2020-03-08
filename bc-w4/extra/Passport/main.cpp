@@ -10,17 +10,18 @@ int main() {
         Passport::changePassportSeries("ZZ");
         Passport::changePassportNumber(999999);
         
-        Passport *p2 = new Passport("Felicia", "Lagrange", 1955, 1, 2);
-        // Passport *p3 = new Passport("John", "Walenso", 1945, 1, 2);
         
         std::cout << "##########################" << std::endl;
+        Passport *p2 = new Passport("Felicia", "Lagrange", 1955, 1, 2);
         std::cout << *p2 << std::endl;
-        // std::cout << "##########################" << std::endl;
-        // std::cout << *p3 << std::endl;
+        
+        std::cout << "##########################" << std::endl;
+        Passport *p3 = new Passport("John", "Walenso", 1945, 1, 2);
+        std::cout << *p3 << std::endl;
         
         delete(p1);
         delete(p2);
-        // delete(p3);
+        delete(p3);
     } catch (Exception* e) {
         std::cout << e->text << std::endl;
     }
