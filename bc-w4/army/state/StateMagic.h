@@ -20,4 +20,4 @@ class StateMagic {
         void spendMana(int cost);
 };
 
-#endif //STATE_MAGIC_H
+#endif // STATE_MAGIC_H

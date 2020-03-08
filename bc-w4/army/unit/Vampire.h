@@ -12,4 +12,4 @@ class Vampire : public Unit, public Undead {
         virtual ~Vampire();
 };
 
-#endif //VAMPIRE_H
+#endif // VAMPIRE_H

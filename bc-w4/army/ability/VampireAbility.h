@@ -15,4 +15,4 @@ class VampireAbility : public Ability {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //VAMPIRE_ABILITY_H
+#endif // VAMPIRE_ABILITY_H

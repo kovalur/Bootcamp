@@ -32,4 +32,4 @@ class State {
         void decreaseDamage(int extraDmg);
 };
 
-#endif //STATE_H
+#endif // STATE_H

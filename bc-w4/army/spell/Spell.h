@@ -28,4 +28,4 @@ class Spell {
         virtual void action(Unit* target) = 0;
 };
 
-#endif //SPELL_H
+#endif // SPELL_H

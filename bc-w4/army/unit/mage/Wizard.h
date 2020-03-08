@@ -12,4 +12,4 @@ class Wizard : public SpellCaster {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //WIZARD_H
+#endif // WIZARD_H

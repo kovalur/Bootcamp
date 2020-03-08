@@ -18,4 +18,4 @@ class Warlock : public SpellCaster {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //WARLOCK_H
+#endif // WARLOCK_H

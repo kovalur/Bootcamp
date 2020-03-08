@@ -23,4 +23,4 @@ class MagicAbility {
         virtual void counterAttack(Unit* enemy);
 };
 
-#endif //MAGIC_ABILITY_H
+#endif // MAGIC_ABILITY_H

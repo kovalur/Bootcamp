@@ -11,4 +11,4 @@ class Rogue : public Unit {
         virtual ~Rogue();
 };
 
-#endif //ROGUE_H
+#endif // ROGUE_H

@@ -20,4 +20,4 @@ class Werewolf : public Unit {
         void transform();
 };
 
-#endif //WEREWOLF_H
+#endif // WEREWOLF_H

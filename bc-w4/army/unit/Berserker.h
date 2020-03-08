@@ -14,4 +14,4 @@ class Berserker : public Unit {
         void takeMagicDamage(int dmg) override;
 };
 
-#endif //BERSERKER_H
+#endif // BERSERKER_H

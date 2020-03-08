@@ -14,4 +14,4 @@ class Observer {
         virtual void update(Observable* observable) = 0;
 };
 
-#endif //OBSERVER_H
+#endif // OBSERVER_H

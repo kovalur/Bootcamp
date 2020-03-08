@@ -4,4 +4,4 @@
 
 class Undead {};
 
-#endif //UNDEAD_H
+#endif // UNDEAD_H

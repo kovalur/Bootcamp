@@ -14,4 +14,4 @@ class PriestMagicAbility : public MagicAbility {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //PRIEST_MAGIC_ABILITY_H
+#endif // PRIEST_MAGIC_ABILITY_H

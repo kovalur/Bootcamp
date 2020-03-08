@@ -12,4 +12,4 @@ class DefaultAbility : public Ability {
         void attack(Unit* enemy) override;
 };
 
-#endif //DEFAULT_ABILITY_H
+#endif // DEFAULT_ABILITY_H

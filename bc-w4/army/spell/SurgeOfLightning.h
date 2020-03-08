@@ -15,4 +15,4 @@ class SurgeOfLightning : public Spell {
         void action(Unit* target) override;
 };
 
-#endif //SURGEOFLIGHTNING_H
+#endif // SURGEOFLIGHTNING_H

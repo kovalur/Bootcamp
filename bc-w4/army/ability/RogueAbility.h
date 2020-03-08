@@ -12,4 +12,4 @@ class RogueAbility : public Ability {
         void attack(Unit* enemy) override;
 };
 
-#endif //ROGUE_ABILITY_H
+#endif // ROGUE_ABILITY_H

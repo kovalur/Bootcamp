@@ -15,4 +15,4 @@ class HealFriend : public Spell {
         void action(Unit* target) override;
 };
 
-#endif //HEAL_FRIEND_H
+#endif // HEAL_FRIEND_H

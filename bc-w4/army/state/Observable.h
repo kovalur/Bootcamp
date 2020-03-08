@@ -21,4 +21,4 @@ class Observable {
         virtual void attach(Observer* observer) = 0;
 };
 
-#endif //OBSERVABLE_H
+#endif // OBSERVABLE_H

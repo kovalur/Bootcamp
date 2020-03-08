@@ -15,4 +15,4 @@ class Demon : public Soldier {
         void addHitPoints(int hp) override;
 };
 
-#endif //DEMON_H
+#endif // DEMON_H

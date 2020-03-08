@@ -38,4 +38,4 @@ enum class Mana {
     Necromancer = 100
 };
 
-#endif //PROPERTIES_H
+#endif // PROPERTIES_H

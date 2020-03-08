@@ -23,4 +23,4 @@ class Necromancer : public SpellCaster, public Observer, public Undead {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //NECROMANCER_H
+#endif // NECROMANCER_H

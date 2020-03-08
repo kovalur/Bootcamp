@@ -12,4 +12,4 @@ class Healer : public SpellCaster {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //HEALER_H
+#endif // HEALER_H

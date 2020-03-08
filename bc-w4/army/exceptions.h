@@ -8,4 +8,4 @@ class NoMagicAffectException {};
 class NoSuchSpellException {};
 class UnitHealNotAllowedException {};
 
-#endif //EXCEPTIONS_H
+#endif // EXCEPTIONS_H

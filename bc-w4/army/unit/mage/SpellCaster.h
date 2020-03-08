@@ -43,4 +43,4 @@ class SpellCaster : public Unit {
 
 std::ostream& operator<<(std::ostream& out, const SpellCaster& spellCaster);
 
-#endif //SPELL_CASTER_H
+#endif // SPELL_CASTER_H

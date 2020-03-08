@@ -18,4 +18,4 @@ class Ability {
         virtual void counterAttack(Unit* enemy);
 };
 
-#endif //ABILITY_H
+#endif // ABILITY_H

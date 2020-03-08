@@ -11,4 +11,4 @@ class Soldier : public Unit {
         virtual ~Soldier();
 };
 
-#endif //SOLDIER_H
+#endif // SOLDIER_H

@@ -14,4 +14,4 @@ class Priest : public SpellCaster {
         void counterAttack(Unit* enemy) override;
 };
 
-#endif //PRIEST_H
+#endif // PRIEST_H

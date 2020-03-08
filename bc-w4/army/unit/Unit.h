@@ -41,4 +41,4 @@ class Unit : public Observable {
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit);
 
-#endif //UNIT_H
+#endif // UNIT_H
