@@ -26,7 +26,7 @@ class Passport {
         void setPassportId();
         void setDateOfBirth();
         
-        void validate(int day, int month, int year);
+        void validateDate(int day, int month, int year);
         
         void adjustIdParams();
     public:

@@ -3,7 +3,7 @@
 Passport::Passport(std::string firstName, std::string lastName,
                    int yearOfBirth, int monthOfBirth, int dayOfBirth)
                    : firstName(firstName), lastName(lastName) {
-    this->validate(dayOfBirth, monthOfBirth, yearOfBirth);
+    this->validateDate(dayOfBirth, monthOfBirth, yearOfBirth);
     this->dateOfBirthParams.insert(std::pair<std::string,int>("year", yearOfBirth));
     this->dateOfBirthParams.insert(std::pair<std::string,int>("month", monthOfBirth));
     this->dateOfBirthParams.insert(std::pair<std::string,int>("day", dayOfBirth));
@@ -29,21 +29,6 @@ const std::string& Passport::getPassportId() const {
     return this->passportId;
 }
 
-std::string Passport::currentPasswordSeries() {
-    return std::string(1, passportSeries[0]) + std::string(1, passportSeries[1]);
-}
-
-unsigned int Passport::currentPasswordNumber() {
-    return passportNumber == PN_H + 1 ? passportNumber - 1 : passportNumber;
-}
-
-void Passport::setDateOfBirth() {
-    std::string year = std::to_string(this->dateOfBirthParams["year"]);
-    std::string month = std::to_string(this->dateOfBirthParams["month"]);
-    std::string day = std::to_string(this->dateOfBirthParams["day"]);
-    this->dateOfBirth = month + '/' + day + '/' + year;
-}
-
 void Passport::setPassportId() {
     if ( passportNumber > PN_H ) {
         this->adjustIdParams(); 
@@ -54,8 +39,57 @@ void Passport::setPassportId() {
     passportNumber += 1;
 }
 
+void Passport::setDateOfBirth() {
+    std::string year = std::to_string(this->dateOfBirthParams["year"]);
+    std::string month = std::to_string(this->dateOfBirthParams["month"]);
+    std::string day = std::to_string(this->dateOfBirthParams["day"]);
+    this->dateOfBirth = month + '/' + day + '/' + year;
+}
+
+void Passport::validateDate(int day, int month, int year) {
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    std::string message = std::to_string(day) + '/' + std::to_string(month) + '/' + std::to_string(year) + " is invalid date.";
+    
+    if ( month > 0 && month <= 12 && year > 0 && day > 0 ) {
+        if ( !(year % 400 || year % 4) && month == 2 ) {
+            if ( day <= 29 ) {
+                return;
+            }
+        }
+        if ( day <= daysInMonth[month-1] ) {
+            return;
+        }
+    }
+    throw new InvalidDate(message);
+}
+
+void Passport::adjustIdParams() {
+    if ( passportSeries[0] == PS_H && passportSeries[1] == PS_H ) {
+        passportNumber = PN_H;
+        throw new PassportIdLimit();
+    }
+    if ( passportSeries[1] < PS_H ) {
+        passportSeries[1] = passportSeries[1] + 1;
+        passportNumber = PN_L;
+        return;
+    }
+    if ( passportSeries[0] < PS_H ) {
+        passportSeries[0] = passportSeries[0] + 1;
+        passportSeries[1] = 'A';
+        passportNumber = PN_L;
+    }
+}
+
+std::string Passport::currentPasswordSeries() {
+    return std::string(1, passportSeries[0]) + std::string(1, passportSeries[1]);
+}
+
+unsigned int Passport::currentPasswordNumber() {
+    return passportNumber == PN_H + 1 ? passportNumber - 1 : passportNumber;
+}
+
 void Passport::changePassportSeries(const std::string& series) {
-    if ( series.length() > 2 ) {
+    if ( series.length() != 2 ) {
         throw new InvalidPassportSeries();
     }
     
@@ -74,40 +108,6 @@ void Passport::changePassportNumber(int number) {
         throw new InvalidPassportNumber();
     }
     passportNumber = number;
-}
-
-void Passport::validate(int day, int month, int year) {
-    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    std::string text = std::to_string(day) + '/' + std::to_string(month) + '/' + std::to_string(year) + " is invalid date.";
-    
-    if ( month > 0 && month <= 12 && year > 0 && day > 0 ) {
-        if ( !(year % 400 || year % 4) && month == 2 ) {
-            if ( day <= 29 ) {
-                return;
-            }
-        }
-        if ( day <= daysInMonth[month-1] ) {
-            return;
-        }
-    }
-    throw new InvalidDate(text);
-}
-
-void Passport::adjustIdParams() {
-    if ( passportSeries[0] == PS_H && passportSeries[1] == PS_H ) {
-        passportNumber = PN_H;
-        throw new PassportIdLimit();
-    }
-    if ( passportSeries[1] < PS_H ) {
-        passportSeries[1] = passportSeries[1] + 1;
-        passportNumber = PN_L;
-        return;
-    }
-    if ( passportSeries[0] < PS_H ) {
-        passportSeries[0] = passportSeries[0] + 1;
-        passportSeries[1] = 'A';
-        passportNumber = PN_L;
-    }
 }
 
 std::ostream& operator<<(std::ostream& out, const Passport& passport) {
