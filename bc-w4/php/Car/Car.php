@@ -1,5 +1,5 @@
 <?php
-    require_once(dirname(dirname(__FILE__)) . '\Basic\Point.php');
+    require_once(dirname(dirname(__FILE__)) . '\Basic\Point\Point.php');
     require_once(dirname(__FILE__) . '\exceptions.php');
     
     class Car {
