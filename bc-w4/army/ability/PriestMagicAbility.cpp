@@ -14,13 +14,10 @@ void PriestMagicAbility::cast(Unit* target) {
         dynamic_cast<Undead&>(*target);
         
         if ( this->spell->getSpellType() == attacking ) {
-            int actionPoints =  this->spell->getActionPoints();
+            int actionPoints =  this->spell->getActionPoints() / 2;
             
             this->owner->ensureIsAlive();
             
-            if ( this->owner->getMageType() != attacker ) {
-                actionPoints /= 2;
-            }
             target->takeMagicDamage(actionPoints);
         }
     } catch ( std::bad_cast& bc ) {}
