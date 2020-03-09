@@ -23,7 +23,10 @@ void Necromancer::update(Observable* observable) {
 
 void Necromancer::cast(Unit* target) {
     this->magicAbility->cast(target);
-    target->attach(this);
+    
+    if ( this->magicAbility->getSpell()->getSpellType() == attacking && target->getHitPoints() > 0 ) {
+        target->attach(this); 
+    }
 }
 
 void Necromancer::attack(Unit* enemy) {
