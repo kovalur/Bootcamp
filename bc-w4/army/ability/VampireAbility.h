@@ -6,9 +6,9 @@
 
 class VampireAbility : public Ability {
     private:
-        int biteDamage;
+        int bitePower;
     public:
-        VampireAbility(Unit* owner);
+        VampireAbility(Unit* owner, int bitePower);
         virtual ~VampireAbility();
         
         void attack(Unit* enemy) override;

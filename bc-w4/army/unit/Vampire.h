@@ -8,7 +8,7 @@
 
 class Vampire : public Unit, public Undead {
     public:
-        Vampire(const char* title, int hitPoints, int damage);
+        Vampire(const char* title, int hitPoints, int damage, int bitePower=4);
         virtual ~Vampire();
 };
 

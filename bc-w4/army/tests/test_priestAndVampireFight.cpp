@@ -31,8 +31,8 @@ TEST_CASE( "priest and vampire(or other non-undead unit) can attack each other",
         
         priest.cast(&vampire);
         
-        REQUIRE( vampire.getHitPoints() == 46 );
-        REQUIRE( priest.getHitPoints() == 65 );
+        REQUIRE( vampire.getHitPoints() == 49 );
+        REQUIRE( priest.getHitPoints() == 67 );
         REQUIRE( priest.getMana() == 95 );
     }
     SECTION( "priest attacks soldier with magic" ) {
@@ -49,8 +49,8 @@ TEST_CASE( "priest and vampire(or other non-undead unit) can attack each other",
     SECTION( "priest attacks vampire" ) {
         priest.attack(&vampire);
         
-        REQUIRE( vampire.getHitPoints() == 54 );
-        REQUIRE( priest.getHitPoints() == 65 );
+        REQUIRE( vampire.getHitPoints() == 57 );
+        REQUIRE( priest.getHitPoints() == 67 );
         REQUIRE( priest.getMana() == 120 );
     }
     SECTION( "priest attacks soldier" ) {
@@ -67,9 +67,15 @@ TEST_CASE( "priest and vampire(or other non-undead unit) can attack each other",
         
         vampire.attack(&priest);
         
-        REQUIRE( priest.getHitPoints() == 55 );
+        REQUIRE( priest.getHitPoints() == 57 );
         REQUIRE( priest.getMana() == 108 );
         REQUIRE( vampire.getHitPoints() == 58 );
+
+        vampire.attack(&priest);
+
+        REQUIRE( priest.getHitPoints() == 34 );
+        REQUIRE( priest.getMana() == 96 );
+        REQUIRE( vampire.getHitPoints() == 49 );
     }
     SECTION( "soldier attacks priest, and priest then counterattacks with magic" ) {
         priest.changeSpell("SurgeOfLightning");
@@ -85,9 +91,15 @@ TEST_CASE( "priest and vampire(or other non-undead unit) can attack each other",
     SECTION( "vampire attacks priest" ) {
         vampire.attack(&priest);
         
-        REQUIRE( priest.getHitPoints() == 55 );
+        REQUIRE( priest.getHitPoints() == 57 );
         REQUIRE( priest.getMana() == 120 );
         REQUIRE( vampire.getHitPoints() == 62 );
+        
+        vampire.attack(&priest);
+        
+        REQUIRE(priest.getHitPoints() == 34 );
+        REQUIRE(priest.getMana() == 120 );
+        REQUIRE(vampire.getHitPoints() == 57 );
     }
     SECTION( "soldier attacks priest" ) {
         soldier.attack(&priest);

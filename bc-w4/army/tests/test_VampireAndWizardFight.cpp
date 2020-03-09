@@ -21,21 +21,26 @@ TEST_CASE( "vampire and wizard can attack each other", "[vampire][wizard]" ) {
         vampire.attack(&wizard);
         
         REQUIRE( vampire.getHitPoints() == 55 );
-        REQUIRE( wizard.getHitPoints() == 35 );
+        REQUIRE( wizard.getHitPoints() == 38 );
         REQUIRE ( wizard.getMana() == 75 );
+
+        vampire.attack(&wizard);
+        REQUIRE( vampire.getHitPoints() == 42);
+        REQUIRE( wizard.getHitPoints() == 16 );
+        REQUIRE( wizard.getMana() == 60 );
     }
     SECTION( "wizard attacks vampire with magic" ) {
         wizard.cast(&vampire);
         
-        REQUIRE( vampire.getHitPoints() == 40 );
-        REQUIRE( wizard.getHitPoints() == 45 );
+        REQUIRE( vampire.getHitPoints() == 42 );
+        REQUIRE( wizard.getHitPoints() == 48 );
         REQUIRE( wizard.getMana() == 60 );
     }
     SECTION( "wizard attacks vampire" ) {
         wizard.attack(&vampire);
         
-        REQUIRE( vampire.getHitPoints() == 60 );
-        REQUIRE( wizard.getHitPoints() == 45 );
+        REQUIRE( vampire.getHitPoints() == 62 );
+        REQUIRE( wizard.getHitPoints() == 48 );
         REQUIRE( wizard.getMana() == 90 );
     }
 }
