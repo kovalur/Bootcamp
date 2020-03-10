@@ -8,5 +8,6 @@ class NoMagicAffectException {};
 class NoSuchSpellException {};
 class UnitHealNotAllowedException {};
 class NotTurnVampireException {};
+class NotTurnWerewolfException {};
 
 #endif // EXCEPTIONS_H

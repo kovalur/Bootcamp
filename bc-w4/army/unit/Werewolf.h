@@ -3,7 +3,10 @@
 #define WEREWOLF_H
 
 #include "Unit.h"
+#include "Vampire.h"
 #include "../ability/DefaultAbility.h"
+
+#include <string>
 
 enum werewolfState { werewolf, wolf };
 
@@ -18,6 +21,7 @@ class Werewolf : public Unit {
         
         void takeMagicDamage(int dmg) override;
         void transform();
+        Werewolf* makeWerewolf(const Unit* victim);
 };
 
 #endif // WEREWOLF_H

@@ -31,3 +31,14 @@ void Werewolf::transform() {
         this->currentState = werewolf;
     }
 }
+
+Werewolf* Werewolf::makeWerewolf(const Unit* victim) {
+    if ( typeid(*victim) != typeid(Vampire) && typeid(*victim) != typeid(Werewolf) ) {
+        std::string title = std::string(victim->getTitle()).append(" is made Werewolf");
+        Werewolf* werewolf = new Werewolf(title.c_str(), int(Hp::Werewolf), int(Dmg::Werewolf));
+        delete victim;
+        
+        return werewolf;
+    }
+    throw NotTurnWerewolfException();
+}
