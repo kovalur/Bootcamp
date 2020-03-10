@@ -7,5 +7,6 @@ class OutOfManaException {};
 class NoMagicAffectException {};
 class NoSuchSpellException {};
 class UnitHealNotAllowedException {};
+class NotTurnVampireException {};
 
 #endif // EXCEPTIONS_H
