@@ -1,5 +1,3 @@
-#include <cmath>
-
 #include <vector>
 
 class FactorialIterator {
