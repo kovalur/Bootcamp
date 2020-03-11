@@ -1,6 +1,5 @@
 #include "NaturalNumbersIterator.hpp"
 
-
 NaturalNumbersIterator::NaturalNumbersIterator(int limit) : limit(limit), current(1) {}
 
 void NaturalNumbersIterator::next() {
@@ -11,13 +10,10 @@ void NaturalNumbersIterator::next() {
 }
 
 int NaturalNumbersIterator::value() {
-    if ( over() ) {
-        return current - 1;
-    }
     return current;
 }
 
-bool NaturalNumbersIterator::over() { return current > limit; }
+bool NaturalNumbersIterator::over() { return current >= limit; }
 
 void NaturalNumbersIterator::operator++() { next(); }
 
