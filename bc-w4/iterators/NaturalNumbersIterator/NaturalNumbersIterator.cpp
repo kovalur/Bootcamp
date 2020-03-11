@@ -11,7 +11,7 @@ void NaturalNumbersIterator::next() {
 }
 
 int NaturalNumbersIterator::value() {
-    if ( current > limit) {
+    if ( over() ) {
         return current - 1;
     }
     return current;
