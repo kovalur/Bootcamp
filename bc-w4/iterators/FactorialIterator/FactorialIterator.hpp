@@ -7,8 +7,6 @@ class FactorialIterator {
         int member;
         int current;
         std::vector<unsigned long long int> array;
-        
-        unsigned long long int factorial(int n);
     public:
         FactorialIterator(int member);
         
