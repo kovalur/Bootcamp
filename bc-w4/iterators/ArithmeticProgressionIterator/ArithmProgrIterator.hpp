@@ -1,6 +1,5 @@
 class ArithmProgrIterator {
     private:
-        int start;
         int step;
         int count;
         int current;

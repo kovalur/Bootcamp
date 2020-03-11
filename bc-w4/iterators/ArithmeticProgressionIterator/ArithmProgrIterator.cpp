@@ -1,6 +1,6 @@
 #include "ArithmProgrIterator.hpp"
 
-ArithmProgrIterator::ArithmProgrIterator(int start, int step, int count) : start(start), step(step), count(count),
+ArithmProgrIterator::ArithmProgrIterator(int start, int step, int count) : step(step), count(count),
                                                                             current(start), counter(1) {}
 
 void ArithmProgrIterator::next() {
