@@ -9,6 +9,7 @@ int main() {
     for ( int i = 1; !seq.over() && i < 10; seq++, i++ ) {
         std::cout << *seq << ' ';
     }
+    seq.next();
     std::cout << seq.value() << std::endl;
     
     return 0;

@@ -13,7 +13,7 @@ void ArithmProgrIterator::next() {
 
 int ArithmProgrIterator::value() { return current; }
 
-bool ArithmProgrIterator::over() { return counter == count; }
+bool ArithmProgrIterator::over() { return counter >= count; }
 
 void ArithmProgrIterator::operator++() { next(); }
 
