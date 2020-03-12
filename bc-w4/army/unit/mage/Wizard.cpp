@@ -8,12 +8,9 @@ Wizard::Wizard(const char* title, int hitPoints, int damage, int mana)
             ("HealFriend", new HealFriend(15, 15, this)));
         this->magicAbility = new MagicAbility(this, this->spellBook["SurgeOfLightning"]);
         this->ability = new DefaultAbility(this);
-        std::cout << "Wizard object initialized." << std::endl;
 }
 
-Wizard::~Wizard() {
-    std::cout << "Wizard object destroyed." << std::endl;
-}
+Wizard::~Wizard() {}
 
 void Wizard::counterAttack(Unit* enemy) {
     if ( this->magicAbility->getSpell()->getSpellType() == attacking ) {

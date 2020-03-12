@@ -8,12 +8,9 @@ Necromancer::Necromancer(const char* title, int hitPoints, int damage, int mana)
             ("HealFriend", new HealFriend(20, 20, this)));
         this->magicAbility = new MagicAbility(this, this->spellBook["SurgeOfLightning"]);
         this->ability = new DefaultAbility(this);
-        std::cout << "Necromancer object initialized." << std::endl;
 }
 
-Necromancer::~Necromancer() {
-    std::cout << "Necromancer object destroyed." << std::endl;
-}
+Necromancer::~Necromancer() {}
 
 void Necromancer::update(Observable* observable) {
     int extraHp = observable->getOwner()->getHitPointsLimit() / 5;

@@ -5,12 +5,9 @@ Werewolf::Werewolf(const char* title, int hitPoints, int damage) : Unit(title, h
     this->currentState = werewolf;
     this->wolfExtraHp = this->getHitPoints() * 0.3;
     this->wolfExtraDmg = this->getDamage() * 0.2;
-    std::cout << "Werewolf object initialized." << std::endl;
 }
 
-Werewolf::~Werewolf() {
-    std::cout << "Werewolf object destroyed." << std::endl;
-}
+Werewolf::~Werewolf() {}
 
 void Werewolf::takeMagicDamage(int dmg) {
     if ( this->currentState == wolf ) { 

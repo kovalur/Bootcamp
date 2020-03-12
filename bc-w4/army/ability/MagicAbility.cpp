@@ -1,12 +1,10 @@
 #include "MagicAbility.h"
 
-MagicAbility::MagicAbility(SpellCaster* owner, Spell* spell) : owner(owner), spell(spell) {
-    std::cout << "MagicAbility object initialized." << std::endl;
-}
+MagicAbility::MagicAbility(SpellCaster* owner, Spell* spell)
+                                : owner(owner), spell(spell) {}
 
 MagicAbility::~MagicAbility() {
     delete this->spell;
-    std::cout << "MagicAbility object destroyed." << std::endl;
 }
 
 const Spell* MagicAbility::getSpell() const {

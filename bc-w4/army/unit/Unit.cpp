@@ -2,13 +2,11 @@
 
 Unit::Unit(const char* title, int hitPoints, int damage)
     : state(new State(title, hitPoints, damage)), Observable(this) {
-        std::cout << "Unit object initialized." << std::endl;
 }
 
 Unit::~Unit() {
     delete this->state;
     delete this->ability;
-    std::cout << "Unit object destroyed." << std::endl;
 }
 
 void Unit::ensureIsAlive() {

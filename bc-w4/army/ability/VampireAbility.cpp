@@ -1,12 +1,9 @@
 #include "VampireAbility.h"
 
-VampireAbility::VampireAbility(Unit* owner, int bitePower) : Ability(owner), bitePower(bitePower) {
-    std::cout << "VampireAbility object initialized." << std::endl;
-}
+VampireAbility::VampireAbility(Unit* owner, int bitePower)
+                                : Ability(owner), bitePower(bitePower) {}
 
-VampireAbility::~VampireAbility() {
-    std::cout << "VampireAbility object destroyed." << std::endl;
-}
+VampireAbility::~VampireAbility() {}
 
 void VampireAbility::attack(Unit* enemy) {
     this->owner->ensureIsAlive();

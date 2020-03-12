@@ -1,13 +1,9 @@
 #include "HealFriend.h"
 
 HealFriend::HealFriend(int actionPoints, int cost, SpellCaster* owner)
-    : Spell(actionPoints, cost, "HealFriend", owner, healing) {
-    std::cout << "HealFriend object initialized." << std::endl;
-}
+                : Spell(actionPoints, cost, "HealFriend", owner, healing) {}
 
-HealFriend::~HealFriend() {
-    std::cout << "HealFriend object destroyed." << std::endl;
-}
+HealFriend::~HealFriend() {}
 
 void HealFriend::action(Unit* target) {
     int actionPoints = this->actionPoints;

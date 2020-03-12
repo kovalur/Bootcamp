@@ -2,14 +2,11 @@
 
 SpellCaster::SpellCaster(const char* title, int hitPoints, int damage, int mana, TypeOfMage mageType)
     : Unit(title, hitPoints, damage),
-        stateMagic(new StateMagic(mana)), mageType(mageType) {
-            std::cout << "SpellCaster object initialized." << std::endl;
-}
+        stateMagic(new StateMagic(mana)), mageType(mageType) {}
 
 SpellCaster::~SpellCaster() {
     delete this->magicAbility;
     delete this->stateMagic;
-    std::cout << "SpellCaster object destroyed." << std::endl;
 }
 
 int SpellCaster::getMana() const {

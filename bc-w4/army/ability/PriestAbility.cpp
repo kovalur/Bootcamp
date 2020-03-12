@@ -1,12 +1,8 @@
 #include "PriestAbility.h"
 
-PriestAbility::PriestAbility(Unit* owner) : Ability(owner) {
-    std::cout << "PriestAbility object initialized." << std::endl;
-}
+PriestAbility::PriestAbility(Unit* owner) : Ability(owner) {}
 
-PriestAbility::~PriestAbility() {
-    std::cout << "PriestAbility object destroyed." << std::endl;
-}
+PriestAbility::~PriestAbility() {}
 
 void PriestAbility::attack(Unit* enemy) {
     int damage = this->owner->getDamage();

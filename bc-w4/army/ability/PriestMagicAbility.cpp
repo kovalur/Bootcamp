@@ -1,13 +1,9 @@
 #include "PriestMagicAbility.h"
 
 PriestMagicAbility::PriestMagicAbility(SpellCaster* owner, Spell* spell)
-    : MagicAbility(owner, spell) {
-    std::cout << "PriestMagicAbility object initialized." << std::endl;
-}
+                                            : MagicAbility(owner, spell) {}
 
-PriestMagicAbility::~PriestMagicAbility() {
-    std::cout << "PriestMagicAbility object destroyed." << std::endl;
-}
+PriestMagicAbility::~PriestMagicAbility() {}
 
 void PriestMagicAbility::cast(Unit* target) {
     try {

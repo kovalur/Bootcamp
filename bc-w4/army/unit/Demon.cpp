@@ -1,13 +1,9 @@
 #include "Demon.h"
 
 Demon::Demon(const char* title, int hitPoints, int damage)
-    : Soldier(title, hitPoints, damage) {
-    std::cout << "Demon object initialized." << std::endl;
-}
+    : Soldier(title, hitPoints, damage) {}
 
-Demon::~Demon() {
-    std::cout << "Demon object destroyed." << std::endl;
-}
+Demon::~Demon() {}
 
 void Demon::addHitPoints(int hp) {
     throw UnitHealNotAllowedException();

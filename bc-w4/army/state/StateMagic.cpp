@@ -1,12 +1,8 @@
 #include "StateMagic.h"
 
-StateMagic::StateMagic(int mana) : mana(mana), manaLimit(mana) {
-    std::cout << "StateMagic object initialized." << std::endl;
-}
+StateMagic::StateMagic(int mana) : mana(mana), manaLimit(mana) {}
 
-StateMagic::~StateMagic() {
-    std::cout << "StateMagic object destroyed." << std::endl;
-}
+StateMagic::~StateMagic() {}
 
 int StateMagic::getMana() const {
     return this->mana;

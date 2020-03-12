@@ -8,12 +8,9 @@ Warlock::Warlock(const char* title, int hitPoints, int damage, int mana)
             ("HealFriend", new HealFriend(15, 15, this)));
         this->magicAbility = new MagicAbility(this, this->spellBook["SurgeOfLightning"]);
         this->ability = new DefaultAbility(this);
-    std::cout << "Warlock object initialized." << std::endl;
 }
 
-Warlock::~Warlock() {
-    std::cout << "Warlock object destroyed." << std::endl;
-}
+Warlock::~Warlock() {}
 
 Demon* Warlock::callDemons() {
     return new Demon("Simple Demon", 9, 2);

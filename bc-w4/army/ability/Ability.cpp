@@ -1,12 +1,8 @@
 #include "Ability.h"
 
-Ability::Ability(Unit* owner) : owner(owner) {
-    std::cout << "Ability object initialized." << std::endl;
-}
+Ability::Ability(Unit* owner) : owner(owner) {}
 
-Ability::~Ability() {
-    std::cout << "Ability object destroyed." << std::endl;
-}
+Ability::~Ability() {}
 
 void Ability::attack(Unit* enemy) {
     this->owner->ensureIsAlive();

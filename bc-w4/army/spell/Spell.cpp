@@ -1,13 +1,11 @@
 #include "Spell.h"
 
 Spell::Spell(int actionPoints, int cost, const char* spellName, SpellCaster* owner, TypeOfSpell spellType)
-    : actionPoints(actionPoints),  cost(cost), spellName(spellName), owner(owner), spellType(spellType) {
-    std::cout << "Spell object initialized." << std::endl;
+                : actionPoints(actionPoints),  cost(cost), spellName(spellName),
+                owner(owner), spellType(spellType) {
 }
 
-Spell::~Spell() {
-    std::cout << "Spell object destroyed." << std::endl;
-}
+Spell::~Spell() {}
 
 int Spell::getActionPoints() const {
     return this->actionPoints;

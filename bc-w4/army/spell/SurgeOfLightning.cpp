@@ -1,13 +1,9 @@
 #include "SurgeOfLightning.h"
 
 SurgeOfLightning::SurgeOfLightning(int actionPoints, int cost, SpellCaster* owner)
-    : Spell(actionPoints, cost, "SurgeOfLightning", owner, attacking) {
-        std::cout << "SurgeOfLightning object initialized." << std::endl;
-}
+    : Spell(actionPoints, cost, "SurgeOfLightning", owner, attacking) {}
 
-SurgeOfLightning::~SurgeOfLightning() {
-    std::cout << "SurgeOfLightning object destroyed." << std::endl;
-}
+SurgeOfLightning::~SurgeOfLightning() {}
 
 void SurgeOfLightning::action(Unit* target) {
     int actionPoints = this->actionPoints;

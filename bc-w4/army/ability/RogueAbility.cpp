@@ -1,12 +1,8 @@
 #include "RogueAbility.h"
 
-RogueAbility::RogueAbility(Unit* owner) : Ability(owner) {
-    std::cout << "RogueAbility object initialized." << std::endl;
-}
+RogueAbility::RogueAbility(Unit* owner) : Ability(owner) {}
 
-RogueAbility::~RogueAbility() {
-    std::cout << "RogueAbility object destroyed." << std::endl;
-}
+RogueAbility::~RogueAbility() {}
 
 void RogueAbility::attack(Unit* enemy) {
     this->owner->ensureIsAlive();

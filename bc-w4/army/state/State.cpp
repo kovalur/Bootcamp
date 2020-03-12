@@ -3,13 +3,9 @@
 #include <iostream>
 
 State::State(const char* title, int hitPoints, int damage)
-    : title(title), hitPoints(hitPoints), hitPointsLimit(hitPoints), damage(damage) {
-    std::cout << "State object initialized." << std::endl;
-}
+    : title(title), hitPoints(hitPoints), hitPointsLimit(hitPoints), damage(damage) {}
 
-State::~State() {
-    std::cout << "State object destroyed." << std::endl;
-}
+State::~State() {}
 
 void State::ensureIsAlive() {
     if (this->hitPoints == 0) {

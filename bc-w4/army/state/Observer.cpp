@@ -1,9 +1,5 @@
 #include "Observer.h"
 
-Observer::Observer() {
-    std::cout << "Observer object initialized." << std::endl;
-}
+Observer::Observer() {}
 
-Observer::~Observer() {
-    std::cout << "Observer object destroyed." << std::endl;
-}
+Observer::~Observer() {}
