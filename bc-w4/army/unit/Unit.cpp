@@ -73,7 +73,7 @@ void Unit::notify() {
 }
 
 std::ostream& operator<<(std::ostream& out, const Unit& unit) {
-    out << "Unit " << unit.getTitle() << " has " << unit.getHitPoints();
-    out << "(" << unit.getHitPointsLimit() << ")" << " hit points, ";
-    out << "its damage is " << unit.getDamage() << ".";
+    out << unit.getTitle() << ' ' << unit.getHitPoints();
+    out << '(' << unit.getHitPointsLimit() << ')' << " HP/";
+    out << unit.getDamage() << " DMG";
 }

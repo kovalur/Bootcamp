@@ -50,9 +50,9 @@ void SpellCaster::cast(Unit* target) {
 }
 
 std::ostream& operator<<(std::ostream& out, const SpellCaster& spellCaster) {
-    out << "SpellCaster " << spellCaster.getTitle() << " has " << spellCaster.getHitPoints();
-    out << "(" << spellCaster.getHitPointsLimit() << ")" << " hit points, ";
-    out << "its damage is " << spellCaster.getDamage() << ". ";
-    out << "It has " << spellCaster.getMana();
-    out << "(" << spellCaster.getManaLimit() << ")" << " mana.";
-};
+    out << spellCaster.getTitle() << ' ' << spellCaster.getHitPoints();
+    out << '(' << spellCaster.getHitPointsLimit() << ')' << " HP/";
+    out << spellCaster.getDamage() << " DMG/";
+    out << spellCaster.getMana();
+    out << '(' << spellCaster.getManaLimit() << ')' << " MANA";
+}
