@@ -19,4 +19,4 @@ void ArithmProgrIterator::operator++() { next(); }
 
 void ArithmProgrIterator::operator++(int) { operator++(); }
 
-int ArithmProgrIterator::operator*() { value(); }
+int ArithmProgrIterator::operator*() { return value(); }
