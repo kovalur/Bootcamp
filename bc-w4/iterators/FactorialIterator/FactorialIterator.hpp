@@ -1,3 +1,7 @@
+#pragma once
+#ifndef FACTORIAL_ITERATOR_H
+#define FACTORIAL_ITERATOR_H
+
 #include <vector>
 
 class FactorialIterator {
@@ -15,3 +19,5 @@ class FactorialIterator {
         void operator++(int);
         unsigned long long int operator*();
 };
+
+#endif // FACTORIAL_ITERATOR_H

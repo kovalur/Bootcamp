@@ -1,3 +1,7 @@
+#pragma once
+#ifndef ARRAY_ITERATOR_H
+#define ARRAY_ITERATOR_H
+
 class ArrayIterator {
     private:
         int limit;
@@ -13,3 +17,5 @@ class ArrayIterator {
         void operator++(int);
         int operator*();
 };
+
+#endif // ARRAY_ITERATOR_H

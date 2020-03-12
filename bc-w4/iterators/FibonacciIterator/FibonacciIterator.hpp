@@ -1,3 +1,7 @@
+#pragma once
+#ifndef FIBONACCI_ITERATOR_H
+#define FIBONACCI_ITERATOR_H
+
 class FibonacciIterator {
     private:
         int member;
@@ -16,3 +20,5 @@ class FibonacciIterator {
         void operator++(int);
         long long int operator*();
 };
+
+#endif // FIBONACCI_ITERATOR_H

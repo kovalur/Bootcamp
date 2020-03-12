@@ -1,3 +1,7 @@
+#pragma once
+#ifndef NATURAL_NUMBERS_ITERATOR_H
+#define NATURAL_NUMBERS_ITERATOR_H
+
 class NaturalNumbersIterator {
     private:
         int limit;
@@ -12,3 +16,5 @@ class NaturalNumbersIterator {
         void operator++(int);
         int operator*();
 };
+
+#endif // NATURAL_NUMBERS_ITERATOR_H

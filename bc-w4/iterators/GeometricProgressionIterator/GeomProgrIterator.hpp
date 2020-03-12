@@ -1,3 +1,7 @@
+#pragma once
+#ifndef GEOM_PROGR_ITERATOR_H
+#define GEOM_PROGR_ITERATOR_H
+
 class GeomProgrIterator {
     private:
         int step;
@@ -14,3 +18,5 @@ class GeomProgrIterator {
         void operator++(int);
         int operator*();  
 };
+
+#endif // GEOM_PROGR_ITERATOR_H

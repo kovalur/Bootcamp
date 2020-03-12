@@ -1,3 +1,7 @@
+#pragma once
+#ifndef FILE_ITERATOR_H
+#define FILE_ITERATOR_H
+
 #include <fstream>
 #include <string>
 
@@ -16,3 +20,5 @@ class FileIterator {
         void operator++(int);
         const std::string& operator*();
 };
+
+#endif // FILE_ITERATOR_H

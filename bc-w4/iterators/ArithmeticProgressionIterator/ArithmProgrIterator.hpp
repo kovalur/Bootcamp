@@ -1,3 +1,7 @@
+#pragma once
+#ifndef ARITHM_PROGR_ITERATOR_H
+#define ARITHM_PROGR_ITERATOR_H
+
 class ArithmProgrIterator {
     private:
         int step;
@@ -14,3 +18,5 @@ class ArithmProgrIterator {
         void operator++(int);
         int operator*();
 };
+
+#endif // ARITHM_PROGR_ITERATOR_H

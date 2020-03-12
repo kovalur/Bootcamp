@@ -1,3 +1,7 @@
+#pragma once
+#ifndef PRIME_NUM_ITERATOR_H
+#define PRIME_NUM_ITERATOR_H
+
 #include <vector>
 
 class PrimeNumIterator {
@@ -16,3 +20,5 @@ class PrimeNumIterator {
         void operator++(int);
         int operator*();
 };
+
+#endif // PRIME_NUM_ITERATOR_H
