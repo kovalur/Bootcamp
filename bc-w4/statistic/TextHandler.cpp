@@ -97,7 +97,7 @@ void TextHandler::parseText() {
     int diff = 'a' - 'A';
     char symbol;
     std::string word = "";
-    // int counter = 0;
+    int counter = 0;
     std::set<char> wordSeparators = {0x9, 0xA, ' ', '!', '"', '(', ')', ',', '.', ':', ';', '?'};
     
     for ( ; file.get(symbol); ) {
@@ -129,16 +129,16 @@ void TextHandler::parseText() {
             insert(word, words);
             insert(word, wordsStatistics);
             word = "";
-            // counter += 1;
+            counter += 1;
         }
     }
     if ( word != "" ) {
         insert(word, words);
         insert(word, wordsStatistics);
-        // counter += 1;
+        counter += 1;
     }
     file.close();
-    // std::cout << "Number of words: " << counter << std::endl;
+    std::cout << "Number of words: " << counter << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& out, const TextHandler& handler) {
