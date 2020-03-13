@@ -52,7 +52,7 @@ void State::increaseHp(int extraHp) {
 void State::decreaseHp(int hp) {
     this->ensureIsAlive();
     
-    if ( hp > 0 && this->hitPointsLimit > hp ) {
+    if ( hp > 0 ) {
         this->hitPointsLimit -= hp;
         this->_takeDamage(hp);
     }
@@ -66,11 +66,11 @@ void State::increaseDamage(int extraDmg) {
     }
 }
 
-void State::decreaseDamage(int extraDmg) {
+void State::decreaseDamage(int dmg) {
     this->ensureIsAlive();
     
-    if ( extraDmg > 0 && this->damage > extraDmg ) {
-        this->damage -= extraDmg;
+    if ( dmg > 0 ) {
+        this->damage -= dmg;
     }
 }
 

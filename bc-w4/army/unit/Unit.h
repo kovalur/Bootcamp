@@ -2,13 +2,13 @@
 #ifndef UNIT_H
 #define UNIT_H
 
-#include <iostream>
-#include <set>
-
 #include "../state/State.h"
 #include "../ability/Ability.h"
 #include "../state/Observable.h"
 #include "../state/Observer.h"
+
+#include <iostream>
+#include <set>
 
 class Ability;
 

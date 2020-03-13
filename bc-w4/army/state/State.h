@@ -5,13 +5,13 @@
 #include "../exceptions.h"
 
 class State {
+    private:
+        void _takeDamage(int dmg);
     protected:
         const char* title;
         int hitPoints;
         int hitPointsLimit;
         int damage;
-        
-        void _takeDamage(int dmg);
     public:
         State(const char* title, int hitPoints, int damage);
         virtual ~State();
@@ -29,7 +29,7 @@ class State {
         void increaseHp(int extraHp);
         void decreaseHp(int extraHp);
         void increaseDamage(int extraDmg);
-        void decreaseDamage(int extraDmg);
+        void decreaseDamage(int dmg);
 };
 
 #endif // STATE_H

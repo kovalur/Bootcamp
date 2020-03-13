@@ -2,8 +2,6 @@
 #ifndef WARLOCK_H
 #define WARLOCK_H
 
-#include <iostream>
-
 #include "SpellCaster.h"
 #include "../Demon.h"
 

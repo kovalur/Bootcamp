@@ -1,0 +1,81 @@
+**************START INFO**************
+Soldier 100(100) HP/10 DMG
+Rogue 80(80) HP/15 DMG
+Soldier2 100(100) HP/10 DMG
+Rogue2 80(80) HP/15 DMG
+Berserker 120(120) HP/20 DMG
+Vampire 70(70) HP/20 DMG
+Werewolf 50(50) HP/10 DMG
+Wizard 60(60) HP/10 DMG/90(90) MANA
+Healer 40(40) HP/8 DMG/100(100) MANA
+Priest 80(80) HP/8 DMG/120(120) MANA
+Warlock 90(90) HP/11 DMG/80(80) MANA
+Necromancer 90(90) HP/12 DMG/100(100) MANA
+**************ACTION : soldier->attack(healer)**************
+Soldier 96(100) HP/10 DMG
+Healer 30(40) HP/8 DMG/100(100) MANA
+**************ACTION(Healing) : healer->cast(soldier)**************
+Soldier 100(100) HP/10 DMG
+Healer 30(40) HP/8 DMG/80(100) MANA
+**************ACTION(Attacking) : healer->cast(soldier)**************
+Soldier 88(100) HP/10 DMG
+Healer 25(40) HP/8 DMG/55(100) MANA
+**************ACTION : rogue->attack(wizard)**************
+Rogue 80(80) HP/15 DMG
+Wizard 45(60) HP/10 DMG/90(90) MANA
+**************ACTION : berserker->attack(warlock)**************
+No magic allowed.
+Berserker 120(120) HP/20 DMG
+Warlock 70(90) HP/11 DMG/80(80) MANA
+**************ACTION(Attacking) : warlock->cast(berserker)**************
+No magic allowed.
+Berserker 120(120) HP/20 DMG
+Warlock 70(90) HP/11 DMG/80(80) MANA
+**************ACTION : demons[1]->attack(berserker)**************
+Berserker 118(120) HP/20 DMG
+Simple Demon 9(9) HP/2 DMG
+Simple Demon 0(9) HP/2 DMG
+Simple Demon 9(9) HP/2 DMG
+**************ACTION : vampire->attack(priest)**************
+Vampire 62(70) HP/20 DMG
+Priest 56(80) HP/8 DMG/120(120) MANA
+**************ACTION : priest->attack(vampire)**************
+Vampire 50(70) HP/20 DMG
+Priest 42(80) HP/8 DMG/120(120) MANA
+**************ACTION(Attacking) : priest->cast(vampire)**************
+Vampire 30(70) HP/20 DMG
+Priest 28(80) HP/8 DMG/95(120) MANA
+**************ACTION(wolf) : werewolf->transform()**************
+Werewolf 65(65) HP/12 DMG
+**************ACTION(werewolf) : werewolf->transform()**************
+Werewolf 50(50) HP/10 DMG
+**************ACTION(wolf, Attacking) : werewolf->transform() && werewolf->attack(priest)**************
+Werewolf 58(65) HP/12 DMG
+Priest 16(80) HP/8 DMG/83(120) MANA
+**************ACTION(wolf, Healing) : werewolf->transform() && priest->attack(werewolf) && priest->cast(werewolf)**************
+Werewolf 50(50) HP/10 DMG
+Priest 11(80) HP/8 DMG/63(120) MANA
+**************ACTION : vampire->makeVampire(werewolf2)**************
+Turning in Vampire not allowed.
+**************ACTION : werewolf->makeWerewolf(vampire2)**************
+Turning in Werewolf not allowed.
+**************ACTION : vampire->makeVampire(soldier2)**************
+Soldier2 70(70) HP/20 DMG
+**************ACTION : werewolf->makeWerewolf(rogue2)**************
+Rogue2 50(50) HP/10 DMG
+**************ACTION : necromancer->attack(werewolf)**************
+Necromancer 80(90) HP/12 DMG/100(100) MANA
+Werewolf 0(50) HP/10 DMG
+**************END INFO**************
+Soldier 88(100) HP/10 DMG
+Rogue 80(80) HP/15 DMG
+Soldier2 70(70) HP/20 DMG
+Rogue2 50(50) HP/10 DMG
+Berserker 118(120) HP/20 DMG
+Vampire 30(70) HP/20 DMG
+Werewolf 0(50) HP/10 DMG
+Wizard 45(60) HP/10 DMG/90(90) MANA
+Healer 25(40) HP/8 DMG/55(100) MANA
+Priest 11(80) HP/8 DMG/63(120) MANA
+Warlock 70(90) HP/11 DMG/80(80) MANA
+Necromancer 80(90) HP/12 DMG/100(100) MANA

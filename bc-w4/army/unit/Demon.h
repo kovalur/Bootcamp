@@ -2,8 +2,6 @@
 #ifndef DEMON_H
 #define DEMON_H
 
-#include <iostream>
-
 #include "Soldier.h"
 #include "../exceptions.h"
 

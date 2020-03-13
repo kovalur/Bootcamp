@@ -16,7 +16,6 @@ const char* MagicAbility::getSpellName() const {
 }
 
 void MagicAbility::changeSpell(Spell* newSpell) {
-    delete this->spell;
     this->spell = newSpell;
 }
 

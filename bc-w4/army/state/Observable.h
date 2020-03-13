@@ -2,8 +2,6 @@
 #ifndef OBSERVABLE_H
 #define OBSERVABLE_H
 
-#include <iostream>
-
 class Observer;
 class Unit;
 

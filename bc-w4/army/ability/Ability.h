@@ -2,7 +2,6 @@
 #ifndef ABILITY_H
 #define ABILITY_H
 
-#include <iostream>
 #include "../unit/Unit.h"
 
 class Unit;

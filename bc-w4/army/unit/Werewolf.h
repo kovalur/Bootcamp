@@ -8,11 +8,11 @@
 
 #include <string>
 
-enum werewolfState { werewolf, wolf };
+enum class WerewolfState { werewolf, wolf };
 
 class Werewolf : public Unit {
     private:
-        werewolfState currentState;
+        WerewolfState currentState;
         int wolfExtraHp;
         int wolfExtraDmg;
     public:
