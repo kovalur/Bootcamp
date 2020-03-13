@@ -11,11 +11,3 @@ Wizard::Wizard(const char* title, int hitPoints, int damage, int mana)
 }
 
 Wizard::~Wizard() {}
-
-void Wizard::counterAttack(Unit* enemy) {
-    if ( this->magicAbility->getSpell()->getSpellType() == attacking ) {
-        this->magicAbility->counterAttack(enemy);
-    } else {
-        this->ability->counterAttack(enemy);
-    }
-}

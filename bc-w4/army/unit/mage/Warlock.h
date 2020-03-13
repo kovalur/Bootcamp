@@ -13,8 +13,6 @@ class Warlock : public SpellCaster {
         
         Demon* callDemons();
         void callDemons(int qt, Demon* demons[]);
-        
-        void counterAttack(Unit* enemy) override;
 };
 
 #endif // WARLOCK_H

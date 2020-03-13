@@ -25,6 +25,14 @@ const char* SpellCaster::getActiveSpellName() const {
     return this->magicAbility->getSpellName();
 }
 
+void SpellCaster::counterAttack(Unit* enemy) {
+    if ( this->magicAbility->getSpell()->getSpellType() == attacking ) {
+        this->magicAbility->counterAttack(enemy);
+    } else {
+        this->ability->counterAttack(enemy);
+    }
+}
+
 void SpellCaster::addMana(int renewal) {
     this->stateMagic->addMana(renewal);
 }

@@ -11,11 +11,3 @@ Priest::Priest(const char* title, int hitPoints, int damage, int mana)
 }
 
 Priest::~Priest() {}
-
-void Priest::counterAttack(Unit* enemy) {
-    if ( this->magicAbility->getSpell()->getSpellType() == attacking ) {
-        this->magicAbility->counterAttack(enemy);
-    } else {
-        this->ability->counterAttack(enemy);
-    }
-}

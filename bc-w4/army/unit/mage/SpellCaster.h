@@ -33,6 +33,8 @@ class SpellCaster : public Unit {
         TypeOfMage getMageType() const;
         const char* getActiveSpellName() const;
         
+        void counterAttack(Unit* enemy) override;
+        
         void addMana(int renewal);
         void spendMana(int cost);
         

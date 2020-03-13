@@ -21,11 +21,3 @@ void Warlock::callDemons(int qt, Demon* demons[]) {
         demons[i] = new Demon("Simple Demon", 9, 2);
     }
 }
-
-void Warlock::counterAttack(Unit* enemy) {
-    if ( this->magicAbility->getSpell()->getSpellType() == attacking ) {
-        this->magicAbility->counterAttack(enemy);
-    } else {
-        this->ability->counterAttack(enemy);
-    }
-}
