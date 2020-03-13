@@ -2,11 +2,12 @@
 #ifndef NECROMANCER_H
 #define NECROMANCER_H
 
-#include <string>
-
 #include "SpellCaster.h"
+#include "../../ability/DefaultAbility.h"
 #include "../Undead.h"
 #include "../../state/Observer.h"
+
+#include <string>
 
 class Unit;
 

@@ -3,6 +3,7 @@
 #define HEALER_H
 
 #include "SpellCaster.h"
+#include "../../ability/DefaultAbility.h"
 
 class Healer : public SpellCaster {
     public:

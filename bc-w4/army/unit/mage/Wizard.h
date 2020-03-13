@@ -3,6 +3,7 @@
 #define WIZARD_H
 
 #include "SpellCaster.h"
+#include "../../ability/DefaultAbility.h"
 
 class Wizard : public SpellCaster {
     public:

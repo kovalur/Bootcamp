@@ -2,17 +2,16 @@
 #ifndef SPELL_CASTER_H
 #define SPELL_CASTER_H
 
-#include <map>
-#include <string>
-
 #include "../Unit.h"
-#include "../../ability/DefaultAbility.h"
 #include "../../state/StateMagic.h"
 #include "../../ability/MagicAbility.h"
 #include "../../spell/Spell.h"
 #include "../../spell/HealFriend.h"
 #include "../../spell/SurgeOfLightning.h"
 #include "../../exceptions.h"
+
+#include <map>
+#include <string>
 
 class MagicAbility;
 

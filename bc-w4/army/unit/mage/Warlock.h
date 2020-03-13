@@ -3,6 +3,7 @@
 #define WARLOCK_H
 
 #include "SpellCaster.h"
+#include "../../ability/DefaultAbility.h"
 #include "../Demon.h"
 
 class Warlock : public SpellCaster {
