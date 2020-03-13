@@ -23,7 +23,6 @@ class SpellCaster : public Unit {
         MagicAbility* magicAbility;
         TypeOfMage mageType;
         std::map<std::string, Spell*> spellBook;
-        std::map<std::string, Spell*>::iterator spellBookIt;
     public:
         SpellCaster(const char* title, int hitPoints, int damage, int mana, TypeOfMage mageType);
         virtual ~SpellCaster();

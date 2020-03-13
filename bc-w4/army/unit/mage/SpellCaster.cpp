@@ -42,12 +42,13 @@ void SpellCaster::spendMana(int cost) {
 }
 
 void SpellCaster::changeSpell(const char* spellName) {
-    this->spellBookIt = this->spellBook.find(spellName);
+    std::map<std::string, Spell*>::iterator spellBookIt;
+    spellBookIt = this->spellBook.find(spellName);
     
-    if ( this->spellBookIt == this->spellBook.end() ) {
+    if ( spellBookIt == spellBook.end() ) {
         throw NoSuchSpellException();
     }
-    this->magicAbility->changeSpell(this->spellBookIt->second);
+    this->magicAbility->changeSpell(spellBookIt->second);
 }
 
 void SpellCaster::cast(Unit* target) {
