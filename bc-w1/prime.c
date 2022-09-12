@@ -2,14 +2,14 @@
 
 int main() {
     int position;
-    int prime = 2;
+    int prime;
     
     scanf("%d", &position);
     
     if ( position <= 0 ) {
         printf("-1\n");
     } else {
-        for ( int i = 2, counter = 1; counter <= position; i++ ) {
+        for ( int i = 2, counter = 0; counter < position; i++ ) {
             for ( int j = 2; j <= i; j++ ) {
                 if ( j == i ) {
                     counter += 1;
@@ -19,7 +19,11 @@ int main() {
                 }
                 if ( counter == position ) {
                     prime = i;
+                    j = i;
                 }
+            }
+            if ( counter == position ) {
+                prime = i;
             }
         }
         printf("%d\n", prime);
