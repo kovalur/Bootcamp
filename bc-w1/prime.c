@@ -15,10 +15,6 @@ int main() {
                     counter += 1;
                 }
                 if ( i % j == 0 ) {
-                    j = i + 1;
-                }
-                if ( counter == position ) {
-                    prime = i;
                     j = i;
                 }
             }
