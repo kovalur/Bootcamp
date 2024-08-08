@@ -21,3 +21,11 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача strCopy()
+Условие задачи
+void strCopy(char target[], char source[])
+
+Гарантируется, что строка target не короче строки source.
+*/

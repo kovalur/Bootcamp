@@ -81,3 +81,10 @@ int main() {
 
     return 0;
 }
+
+/*
+Задача insertSort()
+
+Условие задачи
+void insertSort(int array[], int len)
+*/

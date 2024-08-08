@@ -33,3 +33,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixPrint()
+
+Условие задачи
+void matrixPrint(FILE *out, int matrix[SIZE][SIZE], int size);
+
+Столбец – первый индекс, строка – второй.
+*/

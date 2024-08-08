@@ -75,3 +75,12 @@ int main() {
 
     return 0;
 }
+
+/*
+Задача pointerIncrement()
+
+Условие задачи
+void pointerIncrement(int *value)
+
+Увеличить на единицу значение по переданному адресу value.
+*/

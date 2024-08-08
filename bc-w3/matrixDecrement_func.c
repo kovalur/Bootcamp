@@ -54,3 +54,11 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixDecrement()
+
+Условие задачи
+void matrixDecrement(int matrix[SIZE][SIZE], int decrement[SIZE][SIZE],
+int size)
+*/

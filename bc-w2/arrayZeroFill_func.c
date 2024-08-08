@@ -16,3 +16,13 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arrayZeroFill()
+
+Условие задачи
+Написать функцию:
+void arrayZeroFill(int array[], int size)
+
+Заполнить массив нулями.
+*/

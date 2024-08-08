@@ -43,3 +43,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixRotate180()
+
+Условие задачи
+void matrixRotate180(int target[SIZE][SIZE], int source[SIZE][SIZE], int size);
+
+Поворот матрицы на 180 градусов по часовой стрелке.
+*/

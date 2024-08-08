@@ -20,3 +20,13 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arrayScan()
+
+Условие задачи
+int arrayScan(FILE *in, int array[], int limit)
+
+Считать из файла in не более limit элементов в массив array.
+Вернуть количество считанных элементов.
+*/

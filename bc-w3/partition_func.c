@@ -57,3 +57,13 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача partition()
+
+Условие задачи
+int partition(int array[], int start, int end)
+
+В качестве опорного элемента брать среднее арифметическое между start и end с
+округлением вниз.
+*/

@@ -41,3 +41,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача fibonacci()
+
+Условие задачи
+int fibonacci(int n)
+
+Использовать рекурсию.
+*/

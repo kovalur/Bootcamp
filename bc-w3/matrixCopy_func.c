@@ -41,3 +41,10 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixCopy()
+
+Условие задачи
+void matrixCopy(int target[SIZE][SIZE], int source[SIZE][SIZE], int size);
+*/

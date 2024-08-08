@@ -19,3 +19,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arrayIncrement()
+
+Условие задачи
+void arrayIncrement(int array[], int size, int increment)
+
+Увеличить каждый элемент массива на значение increment.
+*/

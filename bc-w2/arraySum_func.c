@@ -19,3 +19,14 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arraySum()
+
+Условие задачи
+Написать функцию:
+int arraySum(int array[], int size)
+
+Вернуть сумму элементов массива.
+size > 0
+*/

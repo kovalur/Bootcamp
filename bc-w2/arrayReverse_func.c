@@ -24,3 +24,13 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arrayReverse()
+
+Условие задачи
+Написать функцию:
+void arrayReverse(int array[], int size)
+
+Использование дополнительного массива не разрешается.
+*/

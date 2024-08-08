@@ -43,3 +43,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixRotate270()
+
+Условие задачи
+void matrixRotate270(int target[SIZE][SIZE], int source[SIZE][SIZE], int size);
+
+Поворот матрицы на 270 градусов по часовой стрелке.
+*/

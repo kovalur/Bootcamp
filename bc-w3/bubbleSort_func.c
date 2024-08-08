@@ -54,3 +54,10 @@ int main () {
     
     return 0;
 }
+
+/*
+Задача bubbleSort()
+
+Условие задачи
+void bubbleSort(int array[], int size)
+*/

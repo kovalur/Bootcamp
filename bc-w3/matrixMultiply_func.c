@@ -45,3 +45,10 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixMultiply()
+
+Условие задачи
+void matrixMultiply(int matrix[SIZE][SIZE], int size, int multiplier)
+*/

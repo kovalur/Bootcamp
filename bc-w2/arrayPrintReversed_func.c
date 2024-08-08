@@ -19,3 +19,13 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arrayPrintReversed()
+
+Условие задачи
+Написать функцию:
+void arrayPrintReversed(int array[], int size)
+
+Распечатать массив на экран в строку через пробел в обратном порядке.
+*/

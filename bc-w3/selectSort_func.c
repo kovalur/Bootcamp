@@ -62,3 +62,10 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача selectSort()
+
+Условие задачи
+void selectSort(int array[], int size)
+*/

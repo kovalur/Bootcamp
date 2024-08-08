@@ -25,3 +25,13 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача sliceReverse()
+
+Условие задачи
+Написать функцию:
+void sliceReverse(int array[], int lo, int hi)
+
+Осуществить реверс части массива от lo до hi включительно.
+*/

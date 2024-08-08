@@ -20,3 +20,12 @@ int main() {
 
     return 0;
 }
+
+/*
+Задача strEqual()
+
+Условие задачи
+int strEqual(char str1[], char str2[])
+
+Выяснить, равны ли строки.
+*/

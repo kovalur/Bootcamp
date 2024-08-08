@@ -17,3 +17,10 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача strUpperCase()
+
+Условие задачи
+void strUpperCase(char str[])
+*/

@@ -27,3 +27,14 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача sliceShiftRight()
+
+Условие задачи
+Написать функцию:
+void sliceShiftRight(int array[], int start, int end)
+
+Осуществить циклический сдвиг части массива на один элемент вправо от start до
+end включительно.
+*/

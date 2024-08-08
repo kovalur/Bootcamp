@@ -63,3 +63,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixScan()
+
+Условие задачи
+void matrixScan(FILE *in, int matrix[SIZE][SIZE], int size);
+
+Столбец – первый индекс, строка – второй.
+*/

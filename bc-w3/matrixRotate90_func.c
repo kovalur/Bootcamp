@@ -43,3 +43,12 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixRotate90()
+
+Условие задачи
+void matrixRotate90(int target[SIZE][SIZE], int source[SIZE][SIZE], int size);
+
+Поворот матрицы на 90 градусов по часовой стрелке.
+*/

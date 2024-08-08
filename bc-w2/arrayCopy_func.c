@@ -15,3 +15,11 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача arrayCopy()
+
+Условие задачи
+Написать функцию
+void arrayCopy(int destination[], int source[], int size)
+*/

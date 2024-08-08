@@ -54,3 +54,11 @@ int main() {
     
     return 0;
 }
+
+/*
+Задача matrixIncrement()
+
+Условие задачи
+void matrixIncrement(int matrix[SIZE][SIZE], int increment[SIZE][SIZE],
+int size)
+*/
